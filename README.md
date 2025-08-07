@@ -5,7 +5,7 @@ A practical JavaScript steps to building a digital Raspberry Pie - a ToDo exerci
 
 **A -  Using API REST end-point**
 
-1. Set Up Raspberry Pi
+_1. Set Up Raspberry Pi_
 
 - Flash OS: Install Raspberry Pi OS (Lite or Desktop) using Raspberry Pi Imager.
 
@@ -13,7 +13,7 @@ A practical JavaScript steps to building a digital Raspberry Pie - a ToDo exerci
 
 - Update: Run sudo apt update && sudo apt upgrade -y.
 
-2. Install Node.js
+_2. Install Node.js_
 
 ```
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
