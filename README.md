@@ -3,8 +3,8 @@ A practical JavaScript steps to building a digital Raspberry Pie - a ToDo exerci
 
 ## Practical step-by-step guide using JavaScript (Node.js) on a Raspberry Pi to build and test a simple ToDo App
 
-### Using API REST end-point
+**A -  Using API REST end-point**
 
 
 
-### Using a Custom JSON Object (list)
+**B -  Using a Custom JSON Object (list)**
