@@ -13,4 +13,13 @@ A practical JavaScript steps to building a digital Raspberry Pie - a ToDo exerci
 
 - Update: Run sudo apt update && sudo apt upgrade -y.
 
+2. Install Node.js
+
+```
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt install -y nodejs
+node -v  # Verify installation (v18+)
+
+```
+
 **B -  Using a Custom JSON Object (list)**
