@@ -132,6 +132,8 @@ _5. Extensions for Students_
 
 - GPIO Integration: Use onoff npm package to trigger an LED when a task is added (for hardware interaction).
 
+GPIO (General Purpose Input/Output) is a programmable interface on Raspberry Pi (and other hardware) that allows you to connect and control external electronic components (e.g., LEDs, sensors) by reading/writing digital signals (high/low voltage).
+
 - Deploy: Use nginx as a reverse proxy to expose the app to the internet.
 
 **B -  Using a Custom JSON Object (list)**
