@@ -134,6 +134,86 @@ _5. Extensions for Students_
 
 GPIO (General Purpose Input/Output) is a programmable interface on Raspberry Pi (and other hardware) that allows you to connect and control external electronic components (e.g., LEDs, sensors) by reading/writing digital signals (high/low voltage).
 
+(Example: Use GPIO to turn an LED on/off when a ToDo task is completed!).
+
 - Deploy: Use nginx as a reverse proxy to expose the app to the internet.
+
+**Extended work on Hardware: Extend the above work to integrate GPIO injection to turn the LED on and Off.**
+
+_Practical Steps to Integrate GPIO with the ToDo App (Raspberry Pi)_
+
+i.  Install GPIO Library:
+
+```
+npm install onoff  # Install Node.js GPIO library
+
+```
+
+ii. Initialize GPIO in server.js
+
+```
+const { Gpio } = require('onoff');
+const led = new Gpio(17, 'out'); // LED on GPIO pin 17
+
+```
+
+iii.  Modify the PATCH Endpoint to Toggle LED (Patching) by updating **the /tasks/:id** route in server.js:
+
+```
+app.patch('/tasks/:id', (req, res) => {
+  const task = tasks.find(t => t.id === parseInt(req.params.id));
+  if (task) {
+    task.completed = !task.completed;
+    led.writeSync(task.completed ? 1 : 0); // Turn LED on/off
+    res.json(task);
+  } else {
+    res.status(404).send('Task not found');
+  }
+});
+```
+
+iv. Clean Up GPIO on Exit
+
+Add this to server.js to prevent hardware issues:
+
+```
+process.on('SIGINT', () => {
+  led.unexport(); // Clean up GPIO
+  process.exit();
+});
+```
+
+
+**Hardware Setup**
+
+- Connect LED to GPIO Pin 17:
+
+- Anode (Long leg) → GPIO 17
+
+- Cathode (Short leg) → Ground (GND) via a 220Ω resistor.
+
+- Power Up:
+
+```
+
+node server.js  # Start the server
+
+```
+
+**Testing**
+
+i. Toggle a task in the UI → LED turns on (completed) or off (incomplete).
+
+ii. Observe the LED reacting to task state changes.
+
+**Key Code Injection Points**
+
+i. GPIO Setup (Top of server.js).
+
+ii. LED Control (Inside PATCH endpoint).
+
+iii. Cleanup (SIGINT handler).
+
+(This bridges software (Node.js) and hardware (LED) for tangible feedback!)
 
 **B -  Using a Custom JSON Object (list)**
