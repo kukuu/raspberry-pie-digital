@@ -21,5 +21,44 @@ sudo apt install -y nodejs
 node -v  # Verify installation (v18+)
 
 ```
+_3. Create a Simple ToDo App_
+
+Backend (Express.js)
+
+i. Initialis project
+
+,,,
+mkdir todo-app && cd todo-app
+npm init -y
+npm install express body-parser
+
+```
+
+ii. Create server.js:
+
+```
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+app.use(bodyParser.json());
+
+let tasks = [];
+
+// Add task
+app.post('/tasks', (req, res) => {
+  tasks.push(req.body.task);
+  res.send(`Added: ${req.body.task}`);
+});
+
+// List tasks
+app.get('/tasks', (req, res) => {
+  res.json(tasks);
+});
+
+app.listen(3000, () => console.log('Server running on port 3000'));
+
+```
+
+
 
 **B -  Using a Custom JSON Object (list)**
