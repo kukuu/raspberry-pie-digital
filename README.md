@@ -129,9 +129,9 @@ to find the Pi’s IP.
 
 _5. Extensions for Students_
 
-- Add Persistence: Save tasks to a file or SQLite database.
+i.  Add Persistence: Save tasks to a file or SQLite database.
 
-- GPIO Integration: Use onoff npm package to trigger an LED when a task is added (for hardware interaction).
+ii. GPIO Integration: Use onoff npm package to trigger an LED when a task is added (for hardware interaction).
 
 GPIO (General Purpose Input/Output) is a programmable interface on Raspberry Pi (and other hardware) that allows you to connect and control external electronic components (e.g., LEDs, sensors) by reading/writing digital signals (high/low voltage).
 
