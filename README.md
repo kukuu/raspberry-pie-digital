@@ -23,7 +23,7 @@ node -v  # Verify installation (v18+)
 ```
 _3. Create a Simple ToDo App_
 
-Backend (Express.js)
+**Backend (Express.js)**
 
 i. Initialis project
 
@@ -58,7 +58,80 @@ app.get('/tasks', (req, res) => {
 app.listen(3000, () => console.log('Server running on port 3000'));
 
 ```
+**Frontend (HTML/JS)**
+
+- Create public/index.html:
+
+1. 
+```
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>ToDo App</h1>
+  <input id="taskInput" placeholder="New task">
+  <button onclick="addTask()">Add</button>
+  <ul id="taskList"></ul>
+
+  <script>
+    async function addTask() {
+      const task = document.getElementById('taskInput').value;
+      await fetch('http://localhost:3000/tasks', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ task })
+      });
+      loadTasks();
+    }
+
+    async function loadTasks() {
+      const response = await fetch('http://localhost:3000/tasks');
+      const tasks = await response.json();
+      document.getElementById('taskList').innerHTML = tasks.map(t => `<li>${t}</li>`).join('');
+    }
+    loadTasks();
+  </script>
+</body>
+</html>
+```
+
+**Serve static files in server.js:**
+
+```
+app.use(express.static('public'));
+```
+
+_4. Run and Test_
+
+i. Start the Server
+
+```
+node server.js
+
+```
+
+ii. Access the app:
+
+Open a browser on the Pi (or another device on the same network) and navigate to:
+
+```
+http://<RASPBERRY_PI_IP>:3000
+
+```
+NB: Use:
+
+```
+
+hostname -I
+```
+to find the Pi’s IP.
 
 
+_5. Extensions for Students_
+
+- Add Persistence: Save tasks to a file or SQLite database.
+
+- GPIO Integration: Use onoff npm package to trigger an LED when a task is added (for hardware interaction).
+
+- Deploy: Use nginx as a reverse proxy to expose the app to the internet.
 
 **B -  Using a Custom JSON Object (list)**
