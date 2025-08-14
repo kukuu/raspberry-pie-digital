@@ -177,3 +177,76 @@ function saveResults(unusedA, unusedB, productsC) {
 ```
 
 Code Explanation:  https://github.com/kukuu/raspberry-pie-digital/blob/main/sqLite-db-explanation.md
+
+**D. GPIO Integration (lib/gpio.js)** 
+
+```
+const Gpio = require('onoff').Gpio;
+const LEDS = {
+  worker1: new Gpio(17, 'out'), // Mocked if not on Pi
+  worker2: new Gpio(27, 'out'),
+  worker3: new Gpio(22, 'out')
+};
+
+function updateLeds(activeWorker) {
+  Object.values(LEDS).forEach(led => led.writeSync(0)); // Turn all off
+  if (LEDS[`worker${activeWorker}`]) LEDS[`worker${activeWorker}`].writeSync(1);
+}
+```
+
+**E. Prometheus Metrics (index.js)**
+
+```
+const prometheus = require('prom-client');
+const metrics = {
+  productsC: new prometheus.Counter({ name: 'products_c_total', help: 'Total products C made' }),
+  unusedA: new prometheus.Counter({ name: 'unused_a_total', help: 'Total unused A components' }),
+  unusedB: new prometheus.Counter({ name: 'unused_b_total', help: 'Total unused B components' })
+};
+
+// Expose metrics endpoint
+app.get('/metrics', async (req, res) => {
+  res.set('Content-Type', prometheus.register.contentType);
+  res.end(await prometheus.register.metrics());
+});
+```
+
+## Running the Simulation
+
+- Install dependencies
+
+```
+npm install sqlite3 onoff prom-client express
+
+```
+
+- Run simulation
+
+```
+node index.js
+
+```
+
+- Test
+
+```
+npm test
+```
+
+- Deploy with PM2
+
+```
+
+pm2 start index.js --name "conveyor-belt"
+pm2 save
+pm2 startup
+
+```
+
+- Monitor with Grafana
+
+
+i. Import grafana-dashboard.json
+
+ii. View real-time metrics
+
