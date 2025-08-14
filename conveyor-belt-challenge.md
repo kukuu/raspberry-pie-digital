@@ -25,19 +25,5 @@ ii. Grafana dashboard visualizes throughput and component statistics.
 
 iii. Assumes Node 14+, works cross-platform with GPIO simulation on non-Pi systems.
 
-## Why Use PM2 in This Project?
 
-- Perfect for Raspberry Pi deployments! (Lightweight & efficient.)
-
-- Ensures the simulation keeps running even after SSH disconnects.
-
-- Easily manage logs (useful for debugging production issues).
-
-- Zero downtime if you need to update the app.
-
-- Works well with Prometheus for metrics collection.
-  
-- Keeps your Node.js application running forever (auto-restarts if it crashes).
-
-- Manages multiple instances (clustering) for better CPU utilization.
 
