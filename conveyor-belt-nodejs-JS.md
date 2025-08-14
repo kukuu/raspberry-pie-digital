@@ -150,3 +150,4 @@ class Worker {
 }
 
 ```
+Worker Logic Explanation: https://github.com/kukuu/raspberry-pie-digital/blob/main/worker-logic-explanation.md
