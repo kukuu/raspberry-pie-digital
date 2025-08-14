@@ -214,3 +214,12 @@ app.get('/metrics', async (req, res) => {
 **F. Running the Simulation**
 
 https://github.com/kukuu/raspberry-pie-digital/blob/main/running-simulation.md
+
+**G. Expected Output** 
+
+```
+- Products C made: 12  
+- Unused A components: 18  
+- Unused B components: 15
+
+```
