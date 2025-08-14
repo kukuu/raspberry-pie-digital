@@ -108,3 +108,49 @@ ii. If it was 'B', increments unusedB.
 
 - Tracks unused components that "fell off" the belt’s end (for efficiency metrics).
 
+**Update code to include Assembly**
+
+We extend ConveyorBelt class to include the missing worker logic for processing components A and B into product C, while also updating the productsC counter:
+
+```
+class ConveyorBelt {
+  constructor(length = 10) {
+    this.slots = Array(length).fill(null);
+    this.workers = [
+      { position: 0, canAssemble: false }, // Worker pair 1
+      { position: 3, canAssemble: false }, // Worker pair 2
+      { position: 6, canAssemble: false }  // Worker pair 3
+    ];
+    this.unusedA = 0;
+    this.unusedB = 0;
+    this.productsC = 0;
+  }
+
+  moveBelt() {
+    // Randomly add A, B, or empty (⅓ chance each)
+    const newItem = Math.random() < 0.33 ? 'A' : (Math.random() < 0.5 ? 'B' : null);
+    this.slots.pop(); // Remove last item
+    this.slots.unshift(newItem); // Add new item
+
+    // Track unused components
+    if (this.slots[this.slots.length - 1] === 'A') this.unusedA++;
+    if (this.slots[this.slots.length - 1] === 'B') this.unusedB++;
+
+    // Worker assembly logic
+    this.assembleProducts();
+  }
+
+  assembleProducts() {
+    for (const worker of this.workers) {
+      const { position } = worker;
+      // Check if current and next slot have A and B (order matters)
+      if (this.slots[position] === 'A' && this.slots[position + 1] === 'B') {
+        // Replace A and B with assembled product C
+        this.slots[position] = 'C';
+        this.slots[position + 1] = null; // Clear the adjacent slot
+        this.productsC++; // Increment product count
+      }
+    }
+  }
+}
+```
