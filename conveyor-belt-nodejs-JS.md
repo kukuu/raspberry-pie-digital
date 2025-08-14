@@ -1,4 +1,6 @@
-# Conveyor Belt Simulation - Node.js Solution
+# Conveyor Belt Simulation 
+
+**Node.js Solution**
 
 (With Persistence, GPIO, Tests, Monitoring & Deployment)
 
