@@ -211,4 +211,6 @@ app.get('/metrics', async (req, res) => {
 });
 ```
 
+**F. Running the Simulation**
 
+https://github.com/kukuu/raspberry-pie-digital/blob/main/running-simulation.md
