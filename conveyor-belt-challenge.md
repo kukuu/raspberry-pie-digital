@@ -17,5 +17,10 @@ npm test
 
 ```
 
-- Production: containerize with Docker, deploy with PM2. Grafana dashboard visualizes throughput and component statistics.
-- Assumes Node 14+, works cross-platform with GPIO simulation on non-Pi systems.
+- Production:
+
+i. containerize with Docker, deploy with PM2. 
+
+ii. Grafana dashboard visualizes throughput and component statistics.
+
+iii. Assumes Node 14+, works cross-platform with GPIO simulation on non-Pi systems.
