@@ -176,4 +176,4 @@ function saveResults(unusedA, unusedB, productsC) {
 }
 ```
 
-Code Explanation: 
+Code Explanation:  https://github.com/kukuu/raspberry-pie-digital/blob/main/sqLite-db-explanation.md
