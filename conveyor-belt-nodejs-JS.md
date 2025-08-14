@@ -114,7 +114,7 @@ class ConveyorBelt {
 }
 ```
 
-
+Code Explanation: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-explanation-2.md
 
 B. Worker Logic (lib/workers.js)
 
