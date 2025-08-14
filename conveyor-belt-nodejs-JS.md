@@ -17,6 +17,7 @@ This solution simulates a conveyor belt with 3 worker pairs, where components (A
 - PM2 for production deployment
 
 ### Folder Structure 
+```
 
 /conveyor-belt  
 ├── index.js                # Main app & API  
@@ -32,4 +33,7 @@ This solution simulates a conveyor belt with 3 worker pairs, where components (A
 │   ├── prometheus.yml      # Prometheus scraping config  
 │   └── grafana-dashboard.json # Pre-configured dashboard  
 ├── package.json            # Dependencies & scripts  
-└── README.md               # Setup instructions  
+└── README.md               # Setup instructions
+
+
+``` 
