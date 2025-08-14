@@ -223,3 +223,4 @@ https://github.com/kukuu/raspberry-pie-digital/blob/main/running-simulation.md
 - Unused B components: 15
 
 ```
+H. Full code available here for easy deployment! - [Comming soon]
