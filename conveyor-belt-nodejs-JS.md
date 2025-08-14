@@ -15,3 +15,21 @@ This solution simulates a conveyor belt with 3 worker pairs, where components (A
 - Prometheus + Grafana for real-time monitoring
 
 - PM2 for production deployment
+
+### Folder Structure 
+
+/conveyor-belt  
+├── index.js                # Main app & API  
+├── lib/  
+│   ├── conveyor.js         # Belt logic & simulation  
+│   ├── workers.js          # Worker behavior  
+│   ├── gpio.js             # GPIO control (falls back to mock if not on Pi)  
+│   └── db.js               # SQLite persistence  
+├── test/  
+│   ├── unit/               # Unit tests (Jest)  
+│   └── integration/        # API & DB tests  
+├── config/  
+│   ├── prometheus.yml      # Prometheus scraping config  
+│   └── grafana-dashboard.json # Pre-configured dashboard  
+├── package.json            # Dependencies & scripts  
+└── README.md               # Setup instructions  
