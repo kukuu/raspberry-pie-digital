@@ -1,7 +1,7 @@
 const express = require('express');
 const promClient = require('prom-client');
-const conveyorSimulator = require('./lib/conveyor').default;
-const workerSystem = require('./lib/workers').default;
+const ConveyorSimulator = require('./lib/conveyor');
+const WorkerSystem = require('./lib/workers')
 
 // Initialize Express
 const app = express();
