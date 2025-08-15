@@ -15,7 +15,7 @@
 - PM2 for production deployment
 
 
-## Conveyor belt simulation 101
+## Conveyor Belt simulation 101
 - Run Book: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/RunBook.md
 - Worker Logic & Algorithm: https://github.com/kukuu/raspberry-pie-digital/blob/main/worker-logic-explanation.md
 - Directory Structure:
