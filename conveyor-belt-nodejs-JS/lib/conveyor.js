@@ -1,5 +1,5 @@
 class ConveyorSimulator {
-  
+
       constructor(length = 10) {
         this.slots = Array(length).fill(null);
         this.workers = [ /* 3 pairs */ ];
@@ -21,4 +21,4 @@ class ConveyorSimulator {
     }
 
 
-  export default ConveyorSimulator; 
+  module.exports = ConveyorSimulator;
