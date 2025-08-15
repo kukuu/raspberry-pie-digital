@@ -69,6 +69,122 @@ i. Import grafana-dashboard.json
 
 ii. View real-time metrics
 
+## Belt Mechanics for Conveyor.js
+
+Key Features:
+
+Belt Mechanics:
+
+10-slot conveyor belt
+
+Random component generation (A, B, or empty)
+
+Tracks unused components falling off the end
+
+Worker Interaction:
+
+Workers interact with odd-numbered slots (1, 3, 5...)
+
+Products placed on even-numbered slots (0, 2, 4...)
+
+Worker coordination handled via worker.pickOrPlace()
+
+Product Assembly:
+
+Completed products ('C') are placed in first available even slot
+
+Production count tracked via productsC
+
+State Management:
+
+Immutable state returns via simulateStep()
+
+Full reset capability with reset()
+
+## Conveyor Belt Simulation
+
+Key Features:
+
+Core Functionality:
+
+POST /api/simulate - Runs simulation for specified steps
+
+POST /api/reset - Resets simulation state
+
+GET /metrics - Prometheus metrics endpoint
+
+GET /health - Health check endpoint
+
+Monitoring:
+
+Tracks products manufactured (conveyor_products_total)
+
+Monitors unused components (conveyor_components_unused)
+
+Default Node.js metrics collection
+
+Error Handling:
+
+CORS support
+
+JSON error responses
+
+Request validation
+
+Configuration:
+
+Environment variable support (PORT)
+
+Default to 5000 if PORT not specified
+
+Worker System:
+
+Initializes 3 workers by default
+
+Maintains individual worker states
+
+Required Dependencies:
+
+
+## Usage
+
+Usage Examples:
+
+- Run Simulation:
+
+```
+curl -X POST http://localhost:5000/api/simulate \
+  -H "Content-Type: application/json" \
+  -d '{"steps": 100}'
+
+```
+
+- Reset Simulation:
+
+```
+curl -X POST http://localhost:5000/api/reset
+
+```
+
+- Get Metrics:
+
+```
+curl http://localhost:5000/metrics
+
+```
+
+- This implementation provides:
+
+i. Production-ready API server
+
+ii. Comprehensive monitoring
+
+iii. Clean state management
+
+iv. Scalable worker system
+
+v. Proper error handling
+
 ## Expected Output
 
 After 100 steps, the system logs:
@@ -187,3 +303,8 @@ The configuration files now support:
 - Historical performance comparison
 - Containerized monitoring stack
 - Production-ready logging
+
+
+## Conveyor belt simulation running on port 5000
+- Metrics: http://localhost:5000/metrics
+- API Docs: http://localhost:5000/api/simulate
