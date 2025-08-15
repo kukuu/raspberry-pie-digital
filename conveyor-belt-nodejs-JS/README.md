@@ -17,8 +17,8 @@
 
 ## Conveyor belt simulation 101
 - Run Book: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/RunBook.md
-- Repository: https://github.com/kukuu/raspberry-pie-digital/tree/main/conveyor-belt-nodejs-JS
 - Worker Logic & Algorithm: https://github.com/kukuu/raspberry-pie-digital/blob/main/worker-logic-explanation.md
+- Repository: https://github.com/kukuu/raspberry-pie-digital/tree/main/conveyor-belt-nodejs-JS
 - Metrics: http://localhost:5000/metrics
 - Web Interface: http://localhost:5000
 - API Docs: http://localhost:5000/api/simulate
