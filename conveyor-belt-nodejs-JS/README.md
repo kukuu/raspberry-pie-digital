@@ -16,6 +16,7 @@
 
 
 ## Conveyor belt simulation running on port 5000
+- Run Book: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/RunBook.md
 - Metrics: http://localhost:5000/metrics
 - API Docs: http://localhost:5000/api/simulate
 
