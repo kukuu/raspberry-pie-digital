@@ -8,7 +8,7 @@
 
 - GPIO integration (LEDs indicate worker activity on Raspberry Pi)
 
-- Unit & integration tests (Jest)
+- Unit & integration tests
 
 - Prometheus + Grafana for real-time monitoring
 
