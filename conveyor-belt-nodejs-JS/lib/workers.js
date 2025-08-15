@@ -1,4 +1,4 @@
-class Worker {
+class WorkerSystem {
     constructor(side) {
       this.hands = [null, null]; // Max 2 items
       this.assemblyTime = 0;
@@ -27,3 +27,5 @@ class Worker {
       }
     }
   }
+  
+  export default WorkerSystem; // Add this at the bottom
