@@ -26,6 +26,8 @@ class WorkerSystem {
         }
       }
     }
+    
   }
   
-  export default WorkerSystem; // Add this at the bottom
+  module.exports = WorkerSystem;
+  
