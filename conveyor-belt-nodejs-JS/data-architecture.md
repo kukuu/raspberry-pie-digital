@@ -1,5 +1,7 @@
 
-# Key Architectural decisions
+# Architectural 
+
+## Key Decisions
 
 - Modular Separation:
 
