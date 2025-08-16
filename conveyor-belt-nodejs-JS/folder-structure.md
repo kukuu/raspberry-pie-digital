@@ -1,4 +1,7 @@
 # Folder Structure
+
+```
+
 /conveyor-belt-nodejs-JS
 │
 ├── lib/                      # Core simulation logic
@@ -35,3 +38,5 @@
 ├── package.json              # Dependencies & scripts
 ├── README.md                 # Project documentation
 └── .gitignore                # Version control excludes
+
+```
