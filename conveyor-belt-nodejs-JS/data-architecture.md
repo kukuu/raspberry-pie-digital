@@ -15,13 +15,14 @@ https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS
 
 ## Data Architecture
 
+```
 
 ┌───────────────────────────────────────────────────────────────────────────────┐
 │                   CONVEYOR BELT SIMULATION ARCHITECTURE                       │
 └───────────────────────────────────────────────────────────────────────────────┘
 
                       ┌───────────────────────────────┐
-                      │      Requirement Analysis      │
+                      │      Requirement Analysis     │
                       │  - Component Flow Rules       │
                       │  - Worker Constraints         │
                       │  - Output Metrics             │
@@ -59,6 +60,8 @@ https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS
 │  • Real-time Viz      │
 │  • Control Interface  │
 └───────────────────────┘
+
+```
 
 ## Key Decision Tree for Algorithms:
 1. Component Generation → [Random?] → Yes: 1/3 probability each (A/B/empty)
