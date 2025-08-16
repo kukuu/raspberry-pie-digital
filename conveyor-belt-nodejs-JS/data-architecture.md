@@ -1,5 +1,5 @@
 
-# Architectural 
+# Architecture
 
 ## Key Decisions
 
