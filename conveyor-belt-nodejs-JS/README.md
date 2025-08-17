@@ -37,7 +37,7 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 
 ## Conveyor Belt Simulation Output
 - Architecture: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/data-architecture.md
-- 
+- Folder Structure: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/folder-structure.md
 - Run Book: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/RunBook.md
 - Metrics: http://localhost:5000/metrics
 - Web Interface: http://localhost:5000
