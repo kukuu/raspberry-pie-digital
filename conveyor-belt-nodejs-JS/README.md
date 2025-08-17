@@ -1,4 +1,4 @@
-# Implementation Summary
+# Conveyor Belt Simulation
 
 The Conveyor Belt simulation was developed using systematic engineering principles, beginning with modular decomposition of the core components. The solution architecture separates concerns between the belt mechanics (conveyor.js), worker coordination (workers.js), and hardware interface (gpio.js), following industrial control system design patterns. The algorithm employs discrete time-step simulation with three key functions: simulateStep() handles belt movement using array rotation logic, pickOrPlace() implements worker decision-making with finite state machine principles, and calculateEfficiency() applies lean manufacturing metrics to evaluate performance. This modular approach enables parallel development and simplifies maintenance through encapsulated functionality.
 
@@ -35,7 +35,7 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 - PM2 for production deployment
 
 
-## Conveyor belt simulation running on port 5000
+## Conveyor belt simulation output
 - Run Book: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/RunBook.md
 - Metrics: http://localhost:5000/metrics
 - Web Interface: http://localhost:5000
