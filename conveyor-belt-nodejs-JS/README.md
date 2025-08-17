@@ -35,7 +35,7 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 - PM2 for production deployment
 
 
-## Conveyor belt simulation output
+## Conveyor Belt Simulation Output
 - Run Book: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/RunBook.md
 - Metrics: http://localhost:5000/metrics
 - Web Interface: http://localhost:5000
