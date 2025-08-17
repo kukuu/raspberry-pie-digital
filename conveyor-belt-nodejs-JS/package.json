@@ -7,9 +7,9 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "jest --coverage --runInBand",
+    "test": "jest --coverage --runInBand --forceExit",
     "test:unit": "jest test/unit --coverage",
-    "test:integration": "jest test/integration --coverage",
+    "test:integration": "jest test/integration --forceExit",
     "test:watch": "jest --watch",
     "lint": "eslint .",
     "metrics": "node ./lib/metrics.js",
@@ -19,6 +19,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.2",
+    "mock-fs": "^5.5.0",
     "onoff": "^6.0.3",
     "prom-client": "^14.2.0",
     "sqlite3": "^5.1.6",
