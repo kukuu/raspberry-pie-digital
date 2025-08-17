@@ -4,8 +4,6 @@
 # Unit tests
 npm test test/unit/gpio.test.js
 
-
-
 # Hardware integration test (mock mode)
 npm test test/integration/hardware.test.js
 
