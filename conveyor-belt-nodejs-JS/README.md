@@ -41,7 +41,7 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 - Folder Structure: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/folder-structure.md
 - Run Book: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/RunBook.md
 - Metrics: http://localhost:5000/metrics
-- Web Interface: http://localhost:5000
+- Simulation Web Interface: http://localhost:5000
 - API Docs: http://localhost:5000/api/simulate
 - Logs: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/logs.md
 - GPIO Tests: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/run-GPIO-tests.md
