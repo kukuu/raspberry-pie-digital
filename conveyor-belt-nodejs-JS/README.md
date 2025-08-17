@@ -44,7 +44,8 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 - GPIO Tests: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/run-GPIO-tests.md
 - GPIO Unit Test Results: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/test/GPIO-tests.png
 - GPIO Integration Test Results: 
-- GPIO Physical GPIO test (on Raspberry Pi): 
+- GPIO Physical GPIO test (on Raspberry Pi):
+- Monitoring Integration: https://github.com/kukuu/raspberry-pie-digital/tree/main/conveyor-belt-nodejs-JS
 
 ## Test from Command Line:
 
