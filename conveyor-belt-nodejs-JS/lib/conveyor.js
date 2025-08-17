@@ -3,17 +3,12 @@ const gpio = require('./gpio');
 
 class ConveyorSimulator {
   constructor() {
-    // Initialize belt state
+    // Remove direct GPIO initialization
     this.slots = Array(10).fill(null);
     this.unusedA = 0;
     this.unusedB = 0;
     this.productsC = 0;
-    this.stepCount = 0;
-
-    // GPIO Setup
-    this.initializeGPIO();
   }
-
   initializeGPIO() {
     // Belt activity indicator
     gpio.setLed('beltActive', true);
@@ -146,4 +141,5 @@ class ConveyorSimulator {
   }
 }
 
+// Change to named export
 module.exports = { ConveyorSimulator };
