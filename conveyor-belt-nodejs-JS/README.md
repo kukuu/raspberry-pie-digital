@@ -70,7 +70,11 @@ node index.js
 ```
 - Access the web interface at:
 
- http://localhost:5000
+ Simulation: http://localhost:5000
+
+ Metrics: http://localhost:5000/metrics
+
+
 
 - All endpoints
 
@@ -81,3 +85,17 @@ node index.js
 3. GET /metrics
 
 4. GET / (web interface)
+
+## Tests
+
+```
+# Unit tests
+npm test test/unit/gpio.test.js
+
+npm run test:integration
+
+# Hardware integration test (mock mode)
+npm test test/integration/hardware.test.js
+
+# Physical GPIO test (on Raspberry Pi)
+node scripts/test-gpio.js
