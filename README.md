@@ -36,7 +36,7 @@ npm test test/integration/hardware.test.js
 node scripts/test-gpio.js
 ```
 
-## Testing in Browser from Browser Console
+## Browser Console Tests
 
 - Request
 ```
