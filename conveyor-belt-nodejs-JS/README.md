@@ -42,6 +42,7 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 - Flow Diagram - https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/conveyor-belt-flow-diagram.png
 - Folder Structure: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/folder-structure.md
 - Run Book: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/RunBook.md
+- Conveyor Belt CLASS: https://github.com/kukuu/raspberry-pie-digital/blob/main/convey-belt-CLASS.md
 - Metrics: http://localhost:5000/metrics
 - Simulation (Web Interface): http://localhost:5000
 - Logs: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/logs.md
