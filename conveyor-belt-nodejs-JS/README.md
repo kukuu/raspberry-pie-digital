@@ -35,7 +35,7 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 - PM2 for production deployment
 
 
-## Conveyor Belt Simulation Output
+## Documentation: Conveyor Belt Simulation
 - Task: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/TASK_1_-_Conveyor_Belt_Challenge__2_.pdf
 - Architecture: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/data-architecture.md
 - Worker Logic: https://github.com/kukuu/raspberry-pie-digital/blob/main/worker-logic-explanation.md
