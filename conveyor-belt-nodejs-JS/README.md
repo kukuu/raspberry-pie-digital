@@ -35,11 +35,11 @@ See: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-node
 
 - Workers pick components, assemble product C (takes 4 steps), and place it back. The system includes:
 
-- SQLite persistence (stores simulation results)
-
 - GPIO integration (LEDs indicate worker activity on Raspberry Pi)
 
 - Unit & integration tests (Jest)
+  
+- SQLite persistence (stores simulation results)
 
 - Prometheus + Grafana for real-time monitoring
 
