@@ -26,4 +26,6 @@ Optimization employed industrial engineering techniques, reducing the simulation
 4. Double-buffered rendering for the web interface. 
 
 These improvements yielded a 40% performance gain in benchmark tests while maintaining 100% backward compatibility with the original specifications. The final implementation demonstrates how software engineering principles can accurately model physical industrial systems when combined with proper domain analysis.
-https://github.com/kukuu/raspberry-pie-digital/blob/main/README.md
+
+
+- https://github.com/kukuu/raspberry-pie-digital/blob/main/README.md
