@@ -15,6 +15,10 @@
 - PM2 for production deployment
 
 
+## Scaffolding
+
+- https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/running-simulation.md
+  
 ## Conveyor belt simulation:  Running on port 5000
 
 - Run Simulation: POST http://localhost:5000/
