@@ -1,6 +1,6 @@
 
 # Browser Console Test
-
+```
 fetch('http://localhost:5000/api/simulate', {
   method: 'POST',
   headers: { 
@@ -41,3 +41,4 @@ fetch('http://localhost:5000/api/simulate', {
   console.log('2. Check CORS is enabled in Express: "app.use(cors())"');
   console.log('3. Try opening Chrome with: "chrome.exe --disable-web-security --user-data-dir=~/chromeTemp"');
 });
+```
