@@ -44,7 +44,7 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 - PM2 for production deployment
 
 
-# Implementation
+## Implementation
 
 - This solution simulates a conveyor belt with 3 worker pairs, where components (A/B) are randomly placed (⅓ chance each). 
 
