@@ -26,6 +26,6 @@ ii. Grafana dashboard visualizes throughput and component statistics.
 iii. Assumes Node 14+, works cross-platform with GPIO simulation on non-Pi systems.
 
 
-## Conveyor Belt Simulation - Node.js an JS solution
+## Conveyor Belt Simulation - Node.js and JS solution
 
 https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS.md
