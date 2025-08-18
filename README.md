@@ -14,6 +14,10 @@
 
 - PM2 for production deployment
 
+## Worker Logic
+
+- https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/worker-logic-explanation.md
+
 
 ## Scaffolding
 
