@@ -46,6 +46,8 @@ node scripts/test-gpio.js
 
 ## Browser Console Tests
 
+- https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/browser-console-test.md
+
 ## Browser Console Response
 - Response
 ```
