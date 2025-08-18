@@ -58,7 +58,7 @@ See: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-node
 
 - SQLite persistence (stores simulation results)
 
-- Prometheus + Grafana for real-time monitoring
+- Prometheus + Grafana for real-time monitoring (Monitoring & Observability)
 
 - PM2 for production deployment
 
