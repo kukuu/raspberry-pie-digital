@@ -44,7 +44,7 @@ c. Sets slot = null (removes component from the belt).
 
 - Assembly: Triggered automatically when holding A+B; takes 4 steps.
 
-Example Workflow
+Example Sequential Workflow
 
 i. Pickup: Worker picks A from belt → hands = ['A', null].
 
