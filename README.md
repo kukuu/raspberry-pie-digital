@@ -14,10 +14,6 @@
 
 - PM2 for production deployment
 
-## Thought Process
-
-- https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/conveyor-belt-execution-steps.md
-
 
 ## Conveyor belt simulation:  Running on port 5000
 
@@ -86,3 +82,8 @@ node index.js
 3. GET /metrics
 
 4. GET / (web interface)
+
+## Apendix
+
+- Thought Process: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/conveyor-belt-execution-steps.md
+- Conveyor Belt CLASS: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/convey-belt-CLASS.md
