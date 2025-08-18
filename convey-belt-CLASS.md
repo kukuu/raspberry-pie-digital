@@ -1,4 +1,4 @@
-# Conveyor Belt Logic 
+# Conveyor Belt CLASS 
 
 _Explanation_:
 
