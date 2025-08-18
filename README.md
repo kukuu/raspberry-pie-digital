@@ -17,7 +17,7 @@
 
 ## Conveyor belt simulation:  Running on port 5000
 
-- Run Simulation: POST http://localhost:5000/api/simulate
+- Run Simulation: POST http://localhost:5000/
 - Reset Simulation: POST http://localhost:5000/api/reset
 - Metrics: http://localhost:5000/metrics
 
