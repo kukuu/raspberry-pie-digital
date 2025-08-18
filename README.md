@@ -14,6 +14,10 @@
 
 - PM2 for production deployment
 
+## Execution Thought Process
+
+- https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/conveyor-belt-execution-steps.md
+
 
 ## Conveyor belt simulation:  Running on port 5000
 
