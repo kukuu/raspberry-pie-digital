@@ -15,7 +15,7 @@
 - PM2 for production deployment
 
 
-## Conveyor belt simulation running on port 5000
+## Conveyor belt simulation:  Running on port 5000
 
 - Run Simulation: POST http://localhost:5000/api/simulate
 - Reset Simulation: POST http://localhost:5000/api/reset
