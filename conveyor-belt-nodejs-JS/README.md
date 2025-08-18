@@ -43,7 +43,7 @@ See: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-node
 
 - Prometheus + Grafana for real-time monitoring
 
-- PM2 for production deployment
+- PM2 for production deployment (Why use PM2: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/why-use-PM2.md)
 
 
 ## Implementation
