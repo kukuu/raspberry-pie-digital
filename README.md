@@ -72,7 +72,7 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 ## Repository
 - https://github.com/kukuu/raspberry-pie-digital/tree/main/conveyor-belt-nodejs-JS
   
-## :  Running Conveyor belt simulation: Port 5000
+## Running Conveyor belt simulation: Port 5000
 
 - Run Simulation: POST http://localhost:5000/
 - Reset Simulation: POST http://localhost:5000/api/reset
