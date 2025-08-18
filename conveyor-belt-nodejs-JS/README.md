@@ -27,6 +27,8 @@ Optimization employed industrial engineering techniques, reducing the simulation
 
 These improvements yielded a 40% performance gain in benchmark tests while maintaining 100% backward compatibility with the original specifications. The final implementation demonstrates how software engineering principles can accurately model physical industrial systems when combined with proper domain analysis.
 
+See: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/GPIO-tests.png
+
 ## Key Components
 
 - The solution simulates a conveyor belt with 3 worker pairs, where components (A/B) are randomly placed (⅓ chance each). 
