@@ -54,7 +54,7 @@ fetch('http://localhost:5000/api/simulate', {
 
 https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/test/conveyor-belt-browser-console-test-response.png
 
-## Test from Command Line:
+## Command Line Tests:
 
 From Command Line (curl):
 
