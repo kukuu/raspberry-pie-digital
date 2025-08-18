@@ -21,7 +21,7 @@
 - Reset Simulation: POST http://localhost:5000/api/reset
 - Metrics: http://localhost:5000/metrics
 
-# Run GPIO Tests
+## Run GPIO Tests
 
 ```
 # Unit tests
