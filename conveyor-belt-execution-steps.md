@@ -1,4 +1,4 @@
-# Conveyor Belt Challenge 
+# Conveyor Belt Execution Steps 
 
 ## Development steps
 -  The simulation initializes a 10-slot conveyor belt with 3 worker pairs.
