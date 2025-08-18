@@ -97,3 +97,4 @@ node index.js
 - Conveyor Belt CLASS: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/convey-belt-CLASS.md
 - The Maze: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/conveyor-belt-maze.md
 - Buffer: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/conveyor-belt-nodejs-JS.md
+- Database setup - https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/sqLite-db-explanation.md
