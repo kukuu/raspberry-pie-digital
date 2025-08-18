@@ -141,7 +141,7 @@ node index.js
 
 
 ## Documentation
-- Task: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/TASK_1_-_Conveyor_Belt_Challenge__2_.pdf
+- Task: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/TASK_1_-_Conveyor_Belt_Challenge__2_.pdf
 - Architecture: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/data-architecture.md
 - Flow Diagram - https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/conveyor-belt-flow-diagram.png
 - Folder Structure: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/folder-structure.md
