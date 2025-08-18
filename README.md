@@ -1,6 +1,6 @@
 
 
-# Conveyor Belt Simulation: Conception & Development
+# Conveyor Belt Simulation
 
 ## Key Components
 
