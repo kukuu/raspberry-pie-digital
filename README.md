@@ -87,3 +87,4 @@ node index.js
 
 - Thought Process: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/conveyor-belt-execution-steps.md
 - Conveyor Belt CLASS: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/convey-belt-CLASS.md
+- The Maze: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/conveyor-belt-maze.md
