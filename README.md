@@ -71,11 +71,9 @@ curl -X POST http://localhost:5000/api/simulate \
 node index.js
 
 ```
-- Access the web interface at:
 
- http://localhost:5000
 
-- All endpoints
+## All endpoints
 
 1. POST /api/simulate
 
