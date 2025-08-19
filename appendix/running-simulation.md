@@ -39,9 +39,9 @@ curl -X POST http://localhost:5000/api/simulate \
 
 - How Dashboard Works: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/simulation-control-dashboad.md
 
-
+- Unit tests
 ```
-# Unit tests
+
 npm test test/unit/gpio.test.js
 
 npm run test:integration
