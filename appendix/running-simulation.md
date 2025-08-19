@@ -8,7 +8,7 @@ npm install sqlite3 onoff prom-client express
 ```
 
 
-## Run Simulation, Dashboard & GPIO Tets
+## Run Simulation, Visualisation Dashboard & GPIO Tets
 
 
 - Start the server:
@@ -35,7 +35,9 @@ curl -X POST http://localhost:5000/api/simulate \
 
  - Metrics: http://localhost:5000/metrics
    
- - Dashboard:: http://localhost:5000/dashboard
+ - Dashboard: http://localhost:5000/dashboard
+
+- How Dashboard Works: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/simulation-control-dashboad.md
 
 
 ```
