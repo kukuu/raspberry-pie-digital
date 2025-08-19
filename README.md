@@ -43,9 +43,20 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 
 - PM2 for production deployment
 
+
 ## Installation Guide & Quick Start
 
 - https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/running-simulation.md
+
+## Architecture
+
+- https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/data-architecture.md
+
+##  Flow Diagram 
+- https://github.com/kukuu/raspberry-pie-digital/blob/main/docs/conveyor-belt-nodejs-JS/conveyor-belt-flow-diagram.png
+
+## Folder Structure:
+- https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/folder-structure.md
 
 
 ## Belt Mechanics for Conveyor.js
@@ -148,14 +159,14 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 
 - https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/worker-logic-explanation.md
 
+## Run Book
+
+- https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/RunBook.md
+
 
 ## Documentation
 
 - Task: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/TASK_1_-_Conveyor_Belt_Challenge__2_.pdf
-- Architecture: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/data-architecture.md
-- Flow Diagram - https://github.com/kukuu/raspberry-pie-digital/blob/main/docs/conveyor-belt-nodejs-JS/conveyor-belt-flow-diagram.png
-- Folder Structure: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/folder-structure.md
-- Run Book: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/RunBook.md
 - Simulation Control Dashboard: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/simulation-control-dashboad.md
 - Logs: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/logs.md
 - GPIO Tests: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/run-GPIO-tests.md
@@ -165,9 +176,6 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 - Monitoring Integration: https://github.com/kukuu/raspberry-pie-digital/tree/main/conveyor-belt-nodejs-JS/docs/monitoring-integration.md
 - GPIO Verification Steps:https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/GPIO-verification-steps.md
 
-## Run Book
-
-- https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/RunBook.md
 
 ## Apendix
 
