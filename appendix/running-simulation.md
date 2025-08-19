@@ -32,6 +32,8 @@ curl -X POST http://localhost:5000/api/simulate \
 - Access the web interface at:
 
  - Simulation: http://localhost:5000
+   
+ - Reset Simulation: POST http://localhost:5000/api/reset
 
  - Metrics: http://localhost:5000/metrics
    
@@ -59,13 +61,6 @@ node scripts/test-gpio.js
 i. Import grafana-dashboard.json
 
 ii. View real-time metrics
-
-  
-### Running Conveyor belt simulation: Port 5000
-
-- Run Simulation: POST http://localhost:5000/
-- Reset Simulation: POST http://localhost:5000/api/reset
-- Metrics: http://localhost:5000/metrics
 
 
 ### Browser Console Tests
