@@ -55,12 +55,6 @@ npm test test/integration/hardware.test.js
 node scripts/test-gpio.js
 ```
 
- - Monitor with Grafana
-
-
-i. Import grafana-dashboard.json
-
-ii. View real-time metrics
 
 
 ### Browser Console Tests
