@@ -65,13 +65,12 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 
 - PM2 for production deployment*
 
+## Repository
+- https://github.com/kukuu/raspberry-pie-digital/tree/main/conveyor-belt-nodejs-JS
+
 ## Worker Logic
 
 - https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/worker-logic-explanation.md
-
-
-## Repository
-- https://github.com/kukuu/raspberry-pie-digital/tree/main/conveyor-belt-nodejs-JS
 
 
 ## Documentation
