@@ -7,27 +7,48 @@ npm install sqlite3 onoff prom-client express
 
 ```
 
-- Run simulation
+
+## Run Simulation, Dashboard & GPIO Tets
+
+
+- Start the server:
 
 ```
 node index.js
 
 ```
 
-- Test
+- Terminal  (curl):
+
 
 ```
-npm test
+curl -X POST http://localhost:5000/api/simulate \
+  -H "Content-Type: application/json" \
+  -d '{"steps": 100}'
+
 ```
 
-- Deploy with PM2
+
+- Access the web interface at:
+
+ - Simulation: http://localhost:5000
+
+ - Metrics: http://localhost:5000/metrics
+   
+ - Dashboard:: http://localhost:5000/dashboard
+
 
 ```
+# Unit tests
+npm test test/unit/gpio.test.js
 
-pm2 start index.js --name "conveyor-belt"
-pm2 save
-pm2 startup
+npm run test:integration
 
+# Hardware integration test (mock mode)
+npm test test/integration/hardware.test.js
+
+# Physical GPIO test (on Raspberry Pi)
+node scripts/test-gpio.js
 ```
 
 - Monitor with Grafana
@@ -49,18 +70,7 @@ ii. View real-time metrics
 
 ### GPIO Tests
 
-```
-# Unit tests
-npm test test/unit/gpio.test.js
 
-npm run test:integration
-
-# Hardware integration test (mock mode)
-npm test test/integration/hardware.test.js
-
-# Physical GPIO test (on Raspberry Pi)
-node scripts/test-gpio.js
-```
 
 ### Browser Console Tests
 
@@ -72,27 +82,6 @@ node scripts/test-gpio.js
 
 ### Command Line Tests:
 
-From Command Line (curl):
-
-
-```
-curl -X POST http://localhost:5000/api/simulate \
-  -H "Content-Type: application/json" \
-  -d '{"steps": 100}'
-
-```
-
-- Start the server:
-
-```
-node index.js
-
-```
-- Access the web interface at:
-
- Simulation: http://localhost:5000
-
- Metrics: http://localhost:5000/metrics
 
 
 
