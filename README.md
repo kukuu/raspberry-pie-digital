@@ -22,7 +22,7 @@
 ## Installation Guide 
 
 - https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/running-simulation.md
-- 
+  
 ## Key Components
 
 - The solution simulates a conveyor belt with 3 worker pairs, where components (A/B) are randomly placed (⅓ chance each). 
