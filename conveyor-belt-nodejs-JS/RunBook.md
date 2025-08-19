@@ -71,79 +71,78 @@ ii. View real-time metrics
 
 ## Belt Mechanics for Conveyor.js
 
-Key Features:
+### Key Features:
 
-Belt Mechanics:
+- Belt Mechanics:
 
-10-slot conveyor belt
+1. 10-slot conveyor belt
 
-Random component generation (A, B, or empty)
+2. Random component generation (A, B, or empty)
 
-Tracks unused components falling off the end
+3. Tracks unused components falling off the end
 
-Worker Interaction:
+4. Worker Interaction:
 
-Workers interact with odd-numbered slots (1, 3, 5...)
+5. Workers interact with odd-numbered slots (1, 3, 5...)
 
-Products placed on even-numbered slots (0, 2, 4...)
+6. Products placed on even-numbered slots (0, 2, 4...)
 
-Worker coordination handled via worker.pickOrPlace()
+7. Worker coordination handled via worker.pickOrPlace()
 
-Product Assembly:
+- Product Assembly:
 
-Completed products ('C') are placed in first available even slot
+1. Completed products ('C') are placed in first available even slot
 
-Production count tracked via productsC
+2. Production count tracked via productsC
 
-State Management:
+- State Management:
 
-Immutable state returns via simulateStep()
+1. Immutable state returns via simulateStep()
 
-Full reset capability with reset()
+2. Full reset capability with reset()
 
 ## Conveyor Belt Simulation
 
-Key Features:
+### Key Features:
 
-Core Functionality:
+- Core Functionality:
 
-POST /api/simulate - Runs simulation for specified steps
+1. POST /api/simulate - Runs simulation for specified steps
 
-POST /api/reset - Resets simulation state
+2. POST /api/reset - Resets simulation state
 
-GET /metrics - Prometheus metrics endpoint
+3. GET /metrics - Prometheus metrics endpoint
 
-GET /health - Health check endpoint
+4. GET /health - Health check endpoint
 
-Monitoring:
+- Monitoring:
 
-Tracks products manufactured (conveyor_products_total)
+1. Tracks products manufactured (conveyor_products_total)
 
-Monitors unused components (conveyor_components_unused)
+2. Monitors unused components (conveyor_components_unused)
 
-Default Node.js metrics collection
+3. Default Node.js metrics collection
 
-Error Handling:
+- Error Handling:
 
-CORS support
+1. CORS support
 
-JSON error responses
+2. JSON error responses
 
-Request validation
+3. Request validation
 
-Configuration:
+- Configuration:
 
-Environment variable support (PORT)
+1. Environment variable support (PORT)
 
-Default to 5000 if PORT not specified
+2. Default to 5000 if PORT not specified
 
-Worker System:
+- Worker System:
 
-Initializes 3 workers by default
+1. Initializes 3 workers by default
 
-Maintains individual worker states
+2. Maintains individual worker states
 
-Required Dependencies:
 
 
 ## Usage
