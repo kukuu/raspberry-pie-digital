@@ -41,13 +41,13 @@ ii. View real-time metrics
 
 
   
-## Running Conveyor belt simulation: Port 5000
+### Running Conveyor belt simulation: Port 5000
 
 - Run Simulation: POST http://localhost:5000/
 - Reset Simulation: POST http://localhost:5000/api/reset
 - Metrics: http://localhost:5000/metrics
 
-## GPIO Tests
+### GPIO Tests
 
 ```
 # Unit tests
@@ -62,15 +62,15 @@ npm test test/integration/hardware.test.js
 node scripts/test-gpio.js
 ```
 
-## Browser Console Tests
+### Browser Console Tests
 
 - https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/browser-console-test.md
 
-## Browser Console Response
+### Browser Console Response
 
 - https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/Browser-console-response.md
 
-## Command Line Tests:
+### Command Line Tests:
 
 From Command Line (curl):
 
