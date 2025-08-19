@@ -27,6 +27,10 @@ Optimization employed industrial engineering techniques, reducing the simulation
 
 These improvements yielded a 40% performance gain in benchmark tests while maintaining 100% backward compatibility with the original specifications. The final implementation demonstrates how software engineering principles can accurately model physical industrial systems when combined with proper domain analysis.
 
+## Task
+
+- https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/TASK_1_-_Conveyor_Belt_Challenge__2_.pdf
+
 ## Solution
 
 - This solution simulates a conveyor belt with 3 worker pairs, where components (A/B) are randomly placed (⅓ chance each). 
@@ -169,7 +173,6 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 
 ## Documentation
 
-- Task: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/TASK_1_-_Conveyor_Belt_Challenge__2_.pdf
 - Simulation Control Dashboard: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/simulation-control-dashboad.md
 - Logs: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/logs.md
 - GPIO Tests: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/run-GPIO-tests.md
