@@ -4,19 +4,23 @@
 
 ## Key Components
 
+## Key Components
+
 - The solution simulates a conveyor belt with 3 worker pairs, where components (A/B) are randomly placed (⅓ chance each). 
 
 - Workers pick components, assemble product C (takes 4 steps), and place it back. The system includes:
-
-- SQLite persistence (stores simulation results)
 
 - GPIO integration (LEDs indicate worker activity on Raspberry Pi)
 
 - Unit & integration tests (Jest)
 
-- Prometheus + Grafana for real-time monitoring
+- Prometheus Client  for real-time monitoring
 
-- PM2 for production deployment
+- Simulation Control Dashboard using Real-time data
+
+- SQLite persistence (stores simulation results)*
+
+- PM2 for production deployment*
 
 
 ## Implementation
