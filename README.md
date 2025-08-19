@@ -70,10 +70,6 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 - https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/worker-logic-explanation.md
 
 
-## Scaffolding
-
-- https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/running-simulation.md
-
 ## Repository
 - https://github.com/kukuu/raspberry-pie-digital/tree/main/conveyor-belt-nodejs-JS
   
