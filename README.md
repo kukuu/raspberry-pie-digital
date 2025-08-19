@@ -114,20 +114,21 @@ node index.js
 
 
 ## Documentation
+
 - Task: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/TASK_1_-_Conveyor_Belt_Challenge__2_.pdf
-- Architecture: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/data-architecture.md
-- Flow Diagram - https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/conveyor-belt-flow-diagram.png
-- Folder Structure: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/folder-structure.md
+- Architecture: https://github.com/kukuu/raspberry-pie-digital/blob/main/docs/conveyor-belt-nodejs-JS/data-architecture.md
+- Flow Diagram - https://github.com/kukuu/raspberry-pie-digital/blob/main/docs/conveyor-belt-nodejs-JS/conveyor-belt-flow-diagram.png
+- Folder Structure: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/folder-structure.md
 - Run Book: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/RunBook.md
 - Metrics: http://localhost:5000/metrics
 - Simulation (Web Interface): http://localhost:5000
-- Logs: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/logs.md
-- GPIO Tests: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/run-GPIO-tests.md
-- GPIO Unit Test Results: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/test/GPIO-tests.png
+- Logs: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/logs.md
+- GPIO Tests: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/run-GPIO-tests.md
+- GPIO Unit Test Results: https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/test/GPIO-tests.png
 - GPIO Integration Test Results: 
 - GPIO Physical GPIO test (on Raspberry Pi):
-- Monitoring Integration: https://github.com/kukuu/raspberry-pie-digital/tree/main/conveyor-belt-nodejs-JS
-- GPIO Verification Steps:https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/GPIO-verification-steps.md
+- Monitoring Integration: https://github.com/kukuu/raspberry-pie-digital/tree/main/conveyor-belt-nodejs-JS/docs/monitoring-integration.md
+- GPIO Verification Steps:https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/GPIO-verification-steps.md
 
 
 ## Apendix
