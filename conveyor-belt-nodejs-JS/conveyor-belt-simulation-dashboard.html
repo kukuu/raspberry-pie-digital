@@ -96,6 +96,14 @@
             background: linear-gradient(to right, #ff416c, #ff4b2b);
         }
         
+        #refreshDashboard {
+            background: linear-gradient(to right, #8e2de2, #4a00e0);
+        }
+        
+        #backToControl {
+            background: linear-gradient(to right, #FF512F, #DD2476);
+        }
+        
         .output {
             background: rgba(0, 0, 0, 0.3);
             border-radius: 8px;
@@ -178,6 +186,22 @@
             background: rgba(255, 0, 0, 0.2);
             color: #ff4500;
         }
+        
+        .history-list {
+            margin-top: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .history-item {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+        
+        .history-item:last-child {
+            border-bottom: none;
+        }
     </style>
 </head>
 <body>
@@ -187,20 +211,18 @@
         <div class="simulation-panel">
             <div class="control-panel">
                 <h2>Simulation Controls</h2>
-                <p>Run the conveyor belt simulation and monitor the results in real-time.</p>
+                <p>Monitor the conveyor belt simulation results in real-time.</p>
                 
                 <div class="button-group">
-                    <button id="runSimulation">Run Simulation</button>
-                    <button id="resetSimulation">Reset Simulation</button>
+                    <button id="refreshDashboard">Refresh Data</button>
+                    <button id="backToControl">Back to Control</button>
                 </div>
                 
                 <div class="simulation-status status-idle">Status: IDLE</div>
             </div>
             
             <div class="output">
-                <p>> System initialized. Ready to run simulation.</p>
-                <p>> Components: A, B, C</p>
-                <p>> Workers: 3 active</p>
+                <p>> Dashboard initialized. Click "Refresh Data" to load simulation history.</p>
             </div>
             
             <div class="metrics">
@@ -220,6 +242,10 @@
                     <div class="metric-value" id="efficiencyValue">0%</div>
                     <div class="metric-label">Efficiency</div>
                 </div>
+            </div>
+            
+            <div class="history-list" id="historyList">
+                <!-- Simulation history will be populated here -->
             </div>
         </div>
         
@@ -250,27 +276,27 @@
         const ctx = document.getElementById('simulationChart').getContext('2d');
         let simulationChart;
         
-        // Initial data
+        // Initial empty data
         const initialData = {
-            labels: ['Run 1', 'Run 2', 'Run 3', 'Run 4', 'Run 5'],
+            labels: [],
             datasets: [
                 {
                     label: 'Products Manufactured',
-                    data: [12, 15, 18, 14, 16],
+                    data: [],
                     backgroundColor: '#4caf50',
                     borderColor: '#4caf50',
                     borderWidth: 1
                 },
                 {
                     label: 'Unused Component A',
-                    data: [8, 6, 5, 7, 6],
+                    data: [],
                     backgroundColor: '#f44336',
                     borderColor: '#f44336',
                     borderWidth: 1
                 },
                 {
                     label: 'Unused Component B',
-                    data: [5, 7, 4, 6, 5],
+                    data: [],
                     backgroundColor: '#ff9800',
                     borderColor: '#ff9800',
                     borderWidth: 1
@@ -324,10 +350,11 @@
         simulationChart = new Chart(ctx, config);
         
         // DOM elements
-        const runButton = document.getElementById('runSimulation');
-        const resetButton = document.getElementById('resetSimulation');
+        const refreshButton = document.getElementById('refreshDashboard');
+        const backButton = document.getElementById('backToControl');
         const outputDiv = document.querySelector('.output');
         const statusDiv = document.querySelector('.simulation-status');
+        const historyList = document.getElementById('historyList');
         
         // Metrics elements
         const productsValue = document.getElementById('productsValue');
@@ -335,110 +362,110 @@
         const unusedBValue = document.getElementById('unusedBValue');
         const efficiencyValue = document.getElementById('efficiencyValue');
         
-        // Simulation state
-        let runCount = 5;
-        let simulationRunning = false;
+        // Function to load simulation data from the API
+        async function loadSimulationData() {
+            try {
+                statusDiv.textContent = 'Status: LOADING';
+                statusDiv.className = 'simulation-status status-running';
+                outputDiv.innerHTML += '\n> Loading simulation data...';
+                
+                const response = await fetch('/api/simulation-history');
+                if (!response.ok) {
+                    throw new Error(`Server returned ${response.status} status`);
+                }
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // Update metrics with current state
+                    productsValue.textContent = data.currentState.productsC;
+                    unusedAValue.textContent = data.currentState.unusedA;
+                    unusedBValue.textContent = data.currentState.unusedB;
+                    efficiencyValue.textContent = `${data.currentState.efficiency}%`;
+                    
+                    // Update chart with history data
+                    updateChart(data.history);
+                    
+                    // Update history list
+                    updateHistoryList(data.history);
+                    
+                    outputDiv.innerHTML += '\n> Data loaded successfully';
+                    statusDiv.textContent = 'Status: IDLE';
+                    statusDiv.className = 'simulation-status status-idle';
+                } else {
+                    throw new Error('Failed to load simulation data');
+                }
+            } catch (error) {
+                console.error('Error loading simulation data:', error);
+                outputDiv.innerHTML += `\n> Error: ${error.message}`;
+                statusDiv.textContent = 'Status: ERROR';
+                statusDiv.className = 'simulation-status status-stopped';
+            }
+        }
         
-        // Function to update the chart with new data
-        function updateChart() {
-            runCount++;
+        // Function to update the chart with history data
+        function updateChart(history) {
+            if (history.length === 0) return;
             
-            // Generate random data for the new run
-            const newProducts = Math.floor(Math.random() * 10) + 10;
-            const newUnusedA = Math.floor(Math.random() * 5) + 3;
-            const newUnusedB = Math.floor(Math.random() * 5) + 2;
+            // Get the labels (simulation timestamps)
+            const labels = history.map((sim, index) => `Run ${index + 1}`);
+            
+            // Get the data for each dataset
+            const productsData = history.map(sim => sim.productsC);
+            const unusedAData = history.map(sim => sim.unusedA);
+            const unusedBData = history.map(sim => sim.unusedB);
             
             // Update the chart data
-            simulationChart.data.labels.push(`Run ${runCount}`);
-            
-            // Keep only the last 5 runs for display
-            if (simulationChart.data.labels.length > 5) {
-                simulationChart.data.labels.shift();
-                simulationChart.data.datasets[0].data.shift();
-                simulationChart.data.datasets[1].data.shift();
-                simulationChart.data.datasets[2].data.shift();
-            }
-            
-            // Add new data
-            simulationChart.data.datasets[0].data.push(newProducts);
-            simulationChart.data.datasets[1].data.push(newUnusedA);
-            simulationChart.data.datasets[2].data.push(newUnusedB);
+            simulationChart.data.labels = labels;
+            simulationChart.data.datasets[0].data = productsData;
+            simulationChart.data.datasets[1].data = unusedAData;
+            simulationChart.data.datasets[2].data = unusedBData;
             
             // Update the chart
             simulationChart.update();
-            
-            // Update metrics
-            productsValue.textContent = newProducts;
-            unusedAValue.textContent = newUnusedA;
-            unusedBValue.textContent = newUnusedB;
-            
-            // Calculate efficiency
-            const totalComponents = newProducts + newUnusedA + newUnusedB;
-            const efficiency = totalComponents > 0 ? ((newProducts / totalComponents) * 100).toFixed(2) : 0;
-            efficiencyValue.textContent = `${efficiency}%`;
-            
-            // Add to output log
-            outputDiv.innerHTML += `<p>> Run ${runCount}: ${newProducts} products, ${newUnusedA} unused A, ${newUnusedB} unused B</p>`;
-            outputDiv.scrollTop = outputDiv.scrollHeight;
         }
         
-        // Function to simulate API call
-        function simulateApiCall() {
-            return new Promise(resolve => {
-                const duration = 1500 + Math.random() * 1000;
-                statusDiv.textContent = `Status: RUNNING (${Math.floor(duration/100)}ms)`;
-                statusDiv.className = 'simulation-status status-running';
+        // Function to update the history list
+        function updateHistoryList(history) {
+            historyList.innerHTML = '';
+            
+            if (history.length === 0) {
+                historyList.innerHTML = '<div class="history-item">No simulation history available</div>';
+                return;
+            }
+            
+            // Reverse the history to show most recent first
+            const reversedHistory = [...history].reverse();
+            
+            reversedHistory.forEach(sim => {
+                const historyItem = document.createElement('div');
+                historyItem.className = 'history-item';
                 
-                setTimeout(() => {
-                    resolve();
-                    statusDiv.textContent = 'Status: IDLE';
-                    statusDiv.className = 'simulation-status status-idle';
-                    simulationRunning = false;
-                }, duration);
+                const date = new Date(sim.timestamp);
+                const timeString = date.toLocaleTimeString();
+                
+                historyItem.innerHTML = `
+                    <strong>${timeString}</strong>: 
+                    ${sim.steps} steps, 
+                    ${sim.productsC} products, 
+                    ${sim.efficiency}% efficiency
+                `;
+                
+                historyList.appendChild(historyItem);
             });
         }
         
-        // Event listeners
-        runButton.addEventListener('click', async () => {
-            if (simulationRunning) return;
-            
-            simulationRunning = true;
-            outputDiv.innerHTML += `<p>> Starting simulation run ${runCount + 1}...</p>`;
-            outputDiv.scrollTop = outputDiv.scrollHeight;
-            
-            // Simulate API call to backend
-            await simulateApiCall();
-            
-            // Update the chart with new data
-            updateChart();
-        });
+        // Function to go back to the control page
+        function goToControl() {
+            window.location.href = '/';
+        }
         
-        resetButton.addEventListener('click', () => {
-            // Reset the chart to initial state
-            simulationChart.data.labels = ['Run 1', 'Run 2', 'Run 3', 'Run 4', 'Run 5'];
-            simulationChart.data.datasets[0].data = [12, 15, 18, 14, 16];
-            simulationChart.data.datasets[1].data = [8, 6, 5, 7, 6];
-            simulationChart.data.datasets[2].data = [5, 7, 4, 6, 5];
-            simulationChart.update();
-            
-            // Reset metrics
-            productsValue.textContent = '16';
-            unusedAValue.textContent = '7';
-            unusedBValue.textContent = '6';
-            efficiencyValue.textContent = '53.33%';
-            
-            // Reset run count
-            runCount = 5;
-            
-            // Clear output and add reset message
-            outputDiv.innerHTML = '<p>> Simulation reset. Ready to run simulation.</p>';
-            outputDiv.innerHTML += '<p>> Components: A, B, C</p>';
-            outputDiv.innerHTML += '<p>> Workers: 3 active</p>';
-            
-            // Update status
-            statusDiv.textContent = 'Status: IDLE';
-            statusDiv.className = 'simulation-status status-idle';
-        });
+        // Event listeners
+        refreshButton.addEventListener('click', loadSimulationData);
+        backButton.addEventListener('click', goToControl);
+        
+        // Load data when the page loads
+        document.addEventListener('DOMContentLoaded', loadSimulationData);
     </script>
 </body>
 </html>
