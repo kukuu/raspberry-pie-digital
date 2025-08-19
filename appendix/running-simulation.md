@@ -8,7 +8,7 @@ npm install sqlite3 onoff prom-client express
 ```
 
 
-## Run Simulation, Visualisation Dashboard & GPIO Tets
+## Run Simulation, Visualisation Dashboard & GPIO Tests
 
 
 - Start the server:
