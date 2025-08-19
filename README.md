@@ -46,6 +46,82 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 ## Installation Guide & Quick Start
 
 - https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/running-simulation.md
+
+
+## Belt Mechanics for Conveyor.js
+
+### Key Features:
+
+- Belt Mechanics:
+
+1. 10-slot conveyor belt
+
+2. Random component generation (A, B, or empty)
+
+3. Tracks unused components falling off the end
+
+4. Worker Interaction:
+
+5. Workers interact with odd-numbered slots (1, 3, 5...)
+
+6. Products placed on even-numbered slots (0, 2, 4...)
+
+7. Worker coordination handled via worker.pickOrPlace()
+
+- Product Assembly:
+
+1. Completed products ('C') are placed in first available even slot
+
+2. Production count tracked via productsC
+
+- State Management:
+
+1. Immutable state returns via simulateStep()
+
+2. Full reset capability with reset()
+
+## Conveyor Belt Simulation
+
+### Key Features:
+
+- Core Functionality:
+
+1. POST /api/simulate - Runs simulation for specified steps
+
+2. POST /api/reset - Resets simulation state
+
+3. GET /metrics - Prometheus metrics endpoint
+
+4. GET /health - Health check endpoint
+
+- Monitoring:
+
+1. Tracks products manufactured (conveyor_products_total)
+
+2. Monitors unused components (conveyor_components_unused)
+
+3. Default Node.js metrics collection
+
+- Error Handling:
+
+1. CORS support
+
+2. JSON error responses
+
+3. Request validation
+
+- Configuration:
+
+1. Environment variable support (PORT)
+
+2. Default to 5000 if PORT not specified
+
+- Worker System:
+
+1. Initializes 3 workers by default
+
+2. Maintains individual worker states
+
   
 ## Key Components
 
