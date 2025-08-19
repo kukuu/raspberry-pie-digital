@@ -65,12 +65,8 @@ node scripts/test-gpio.js
 
 - https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/Browser-console-response.md
 
-### Command Line Tests:
 
-
-
-
-## All endpoints
+### All endpoints
 
 1. POST /api/simulate
 
