@@ -26,6 +26,7 @@ Optimization employed industrial engineering techniques, reducing the simulation
 4. Double-buffered rendering for the web interface. 
 
 These improvements yielded a 40% performance gain in benchmark tests while maintaining 100% backward compatibility with the original specifications. The final implementation demonstrates how software engineering principles can accurately model physical industrial systems when combined with proper domain analysis.
+
 ## Solution
 
 - This solution simulates a conveyor belt with 3 worker pairs, where components (A/B) are randomly placed (⅓ chance each). 
@@ -42,7 +43,7 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 
 - PM2 for production deployment
 
-## Installation Guide 
+## Installation Guide & Quick Start
 
 - https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/running-simulation.md
   
