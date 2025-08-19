@@ -2,6 +2,24 @@
 
 # Conveyor Belt Simulation
 
+
+## Solution
+
+- This solution simulates a conveyor belt with 3 worker pairs, where components (A/B) are randomly placed (⅓ chance each). 
+
+- Workers pick components, assemble product C (takes 4 steps), and place it back. The system includes:
+
+- GPIO integration (LEDs indicate worker activity on Raspberry Pi)
+
+- Unit & integration tests (Jest)
+
+- SQLite persistence (stores simulation results)
+
+- Prometheus + Grafana for real-time monitoring
+
+- PM2 for production deployment
+
+
 ## Key Components
 
 - The solution simulates a conveyor belt with 3 worker pairs, where components (A/B) are randomly placed (⅓ chance each). 
@@ -19,23 +37,6 @@
 - SQLite persistence (stores simulation results)*
 
 - PM2 for production deployment*
-
-
-## Implementation
-
-- This solution simulates a conveyor belt with 3 worker pairs, where components (A/B) are randomly placed (⅓ chance each). 
-
-- Workers pick components, assemble product C (takes 4 steps), and place it back. The system includes:
-
-- GPIO integration (LEDs indicate worker activity on Raspberry Pi)
-
-- Unit & integration tests (Jest)
-
-- SQLite persistence (stores simulation results)
-
-- Prometheus + Grafana for real-time monitoring
-
-- PM2 for production deployment
 
 ## Worker Logic
 
