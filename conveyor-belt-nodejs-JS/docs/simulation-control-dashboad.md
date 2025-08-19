@@ -1,6 +1,6 @@
 # Features
 
-1. Data Fetching: The dashboard now fetches data from the /api/simulation-history endpoint
+1. Data Fetching: The dashboard  fetches data from the /api/simulation-history endpoint
 
 2. Real-time Updates: Click "Refresh Data" to get the latest simulation results
 
