@@ -49,19 +49,16 @@ npm run test:integration
 # Hardware integration test (mock mode)
 npm test test/integration/hardware.test.js
 
-//# Physical GPIO test (on Raspberry Pi)
+# Physical GPIO test (on Raspberry Pi)
 node scripts/test-gpio.js
 ```
 
-// - Monitor with Grafana
+ - Monitor with Grafana
 
 
 i. Import grafana-dashboard.json
 
 ii. View real-time metrics
-
-
-
 
   
 ### Running Conveyor belt simulation: Port 5000
@@ -69,9 +66,6 @@ ii. View real-time metrics
 - Run Simulation: POST http://localhost:5000/
 - Reset Simulation: POST http://localhost:5000/api/reset
 - Metrics: http://localhost:5000/metrics
-
-### GPIO Tests
-
 
 
 ### Browser Console Tests
