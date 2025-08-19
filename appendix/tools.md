@@ -1,69 +1,71 @@
-# Tools
+# Tools 
 
 Tools and Libraries Used in Conveyor Belt Simulation
-Based on the repository at https://github.com/kukuu/raspberry-pie-digital/tree/main/conveyor-belt-nodejs-JS, here are the tools and libraries used in the Conveyor Belt Simulation project:
 
-Core Technologies & Frameworks
-Node.js - JavaScript runtime environment
 
-Express.js - Web application framework for Node.js
+## Core Technologies & Frameworks
 
-onoff - GPIO access and interrupt detection for Raspberry Pi
+- Node.js - JavaScript runtime environment
 
-prom-client - Prometheus metrics client for Node.js
+- Express.js - Web application framework for Node.js
 
-cors - Express middleware for enabling CORS
+- onoff - GPIO access and interrupt detection for Raspberry Pi
 
-Development & Testing Tools
-Jest - JavaScript testing framework
+- prom-client - Prometheus metrics client for Node.js
 
-Chart.js - JavaScript charting library for visualizations
+- cors - Express middleware for enabling CORS
 
-HTML5/CSS3 - Frontend structure and styling
+## Development & Testing Tools
 
-JavaScript (ES6+) - Core programming language
+- Jest - JavaScript testing framework
 
-Hardware Integration
-Raspberry Pi GPIO - Physical computing interface
+- Chart.js - JavaScript charting library for visualizations
 
-LED components - Visual status indicators
+- HTML5/CSS3 - Frontend structure and styling
 
-Sensor integration - For physical simulation components
+- JavaScript (ES6+) - Core programming language
 
-Project Management & Deployment
-npm - Node.js package management
+## Hardware Integration
 
-Git/GitHub - Version control and code hosting
+- LED components - Visual status indicators
 
-Raspberry Pi OS - Operating system for deployment
+- Sensor integration - For physical simulation components
 
-Generative AI Framework Usage
-Based on the project description and implementation patterns, the following AI/ML technologies appear to be integrated:
+## Project Management & Deployment
 
-Digital Twin Framework - Virtual simulation of physical systems
+- npm - Node.js package management
 
-Predictive Analytics - For maintenance and efficiency optimization
+- Git/GitHub - Version control and code hosting
 
-IoT Sensor Data Integration - Real-time data processing
 
-Simulation Modeling - Algorithmic representation of conveyor operations
+- Generative AI Framework Usage
 
-Architecture Patterns
-Microservices Architecture - Modular service design
+- Digital Twin Framework - Virtual simulation of physical systems
 
-RESTful API Design - HTTP-based communication
+- Predictive Analytics - For maintenance and efficiency optimization
 
-Client-Server Model - Web interface with backend API
+- IoT Sensor Data Integration - Real-time data processing
 
-Real-time Data Processing - Live metrics and monitoring
+- Simulation Modeling - Algorithmic representation of conveyor operations
 
-Prometheus Monitoring - Metrics collection and visualization
+## Architecture Patterns
 
-Simulation Components
-Component-based Simulation - A, B, C component modeling
+- Microservices Architecture - Modular service design
 
-Worker System Simulation - Virtual representation of physical workers
+- RESTful API Design - HTTP-based communication
 
-Efficiency Calculation Algorithms - Performance metrics
+- Client-Server Model - Web interface with backend API
 
-State Management - System status tracking
+- Real-time Data Processing - Live metrics and monitoring
+
+- Prometheus Monitoring - Metrics collection and visualization
+
+## Simulation Components
+
+- Component-based Simulation - A, B, C component modeling
+
+- Worker System Simulation - Virtual representation of physical workers
+
+- Efficiency Calculation Algorithms - Performance metrics
+
+- State Management - System status tracking
