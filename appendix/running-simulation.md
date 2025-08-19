@@ -57,13 +57,9 @@ node scripts/test-gpio.js
 
 
 
-### Browser Console Tests
+- Browser Console Tests: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/browser-console-test.md
 
-- https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/browser-console-test.md
-
-### Browser Console Response
-
-- https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/Browser-console-response.md
+- Browser Console Response: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/Browser-console-response.md
 
 
 ### All endpoints
