@@ -4,8 +4,6 @@
 
 ## Key Components
 
-## Key Components
-
 - The solution simulates a conveyor belt with 3 worker pairs, where components (A/B) are randomly placed (⅓ chance each). 
 
 - Workers pick components, assemble product C (takes 4 steps), and place it back. The system includes:
