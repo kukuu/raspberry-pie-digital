@@ -1,6 +1,6 @@
 # Tools 
 
-Tools and Libraries Used in Conveyor Belt Simulation
+Tools and Libraries used in the Conveyor Belt Simulation:
 
 
 ## Core Technologies & Frameworks
