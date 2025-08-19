@@ -89,6 +89,9 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 - Monitoring Integration: https://github.com/kukuu/raspberry-pie-digital/tree/main/conveyor-belt-nodejs-JS/docs/monitoring-integration.md
 - GPIO Verification Steps:https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/GPIO-verification-steps.md
 
+## Run Book
+
+- https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/RunBook.md
 
 ## Apendix
 
