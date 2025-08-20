@@ -17,7 +17,7 @@ This file is the **orchestrator and gateway** of the entire Conveyor Belt Simula
 
 It transforms a collection of individual scripts and classes into a cohesive, resilient, and controllable web application.
 
-## Bock A: Code Function Analysis Table
+## Bock A: Code Function 
 
 This block of code is the **bootstrapping and configuration phase** of the application. Its primary achievement is setting up a sophisticated Node.js server that:
 
@@ -60,7 +60,7 @@ This block of code is the **bootstrapping and configuration phase** of the appli
 
 
 
-## Block B
+## Block B: Code Function 
 
 This code block transforms the Node.js server from a pure API backend into a full-stack application with a built-in web interface. Its key achievements are:
 
@@ -72,8 +72,6 @@ Demonstrates API Usage: The embedded JavaScript acts as a perfect example of how
 
 Enables Basic Interaction: It allows a user to directly interact with the simulation logic running on the server through a visual medium (a web browser) instead of needing to use a command-line tool like curl.
 
-
-### Expanded Code Function Analysis Table
 
 | Line of Code / Code Block | Purpose | Explanation |
 | :--- | :--- | :--- |
@@ -89,7 +87,7 @@ Enables Basic Interaction: It allows a user to directly interact with the simula
 
 
 
-## Block C
+## Block C: Code Function 
 
 This code block completes the server's transformation into a full-featured simulation API and monitoring hub. Its key achievements are:
 
@@ -102,8 +100,6 @@ Data Management: It meticulously manages the simulationHistory array, ensuring t
 Production-Grade Monitoring: The /metrics endpoint integrates the application into a professional observability stack (Prometheus/Grafana), allowing for real-time alerting and visualization of both system performance and business KPIs (products made, component usage).
 
 State Management: The reset endpoint provides a crucial administrative function, ensuring the simulation can be cleansed and returned to a known state for a new experiment or demonstration.
-
-
 
 
 
@@ -121,9 +117,7 @@ State Management: The reset endpoint provides a crucial administrative function,
 
 
 
-## Block D 
-
-
+## Block D: Code Function  
 
 This last code block completes the application by adding **robustness, and observability**. Its key achievements are:
 
