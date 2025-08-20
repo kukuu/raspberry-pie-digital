@@ -61,7 +61,7 @@ This block of code is the **bootstrapping and configuration phase** of the appli
 
 
 ``` 
-## bLOCK B
+## Block B
 
 This code block transforms the Node.js server from a pure API backend into a full-stack application with a built-in web interface. Its key achievements are:
 
