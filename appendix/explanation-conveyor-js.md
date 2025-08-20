@@ -1,6 +1,6 @@
 # Context: conveyor.js
 
-Of course. Here is a table explaining the provided code from the `ConveyorSimulator` class.
+Here is  table explaining the provided code from the `ConveyorSimulator` class.
 
 ## Block A: ConveyorSimulator Class Code Analysis
 
