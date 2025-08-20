@@ -1,4 +1,4 @@
-# Explanations index.js
+# Context: index.js
 
 
 This file is the **orchestrator and gateway** of the entire Conveyor Belt Simulation system. It successfully:
