@@ -33,7 +33,7 @@ This block of code is the **bootstrapping and configuration phase** of the appli
 
 6.  **Sets Up Data Structures:** Initializes in-memory storage (`simulationHistory`) for keeping track of the system's activity over time.
 
-```
+
 
 | Line of Code | Purpose | Explanation |
 | :--- | :--- | :--- |
@@ -60,7 +60,6 @@ This block of code is the **bootstrapping and configuration phase** of the appli
 
 
 
-``` 
 ## Block B
 
 This code block transforms the Node.js server from a pure API backend into a full-stack application with a built-in web interface. Its key achievements are:
@@ -127,7 +126,7 @@ State Management: The reset endpoint provides a crucial administrative function,
 
 
 
-## FBlock D 
+## Block D 
 
 
 
