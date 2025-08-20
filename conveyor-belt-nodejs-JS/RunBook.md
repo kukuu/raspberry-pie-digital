@@ -37,7 +37,7 @@
 
 ## Context & Handshaking: How The  Core Component Files Work Together
 
-- index.js:
+- index.js: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/explanation-index-js.md
   
 - conveyor.js:
   
