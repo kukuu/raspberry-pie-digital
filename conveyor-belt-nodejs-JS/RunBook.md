@@ -39,7 +39,7 @@
 
 - index.js: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/explanation-index-js.md
   
-- conveyor.js:
+- conveyor.js: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/explanation-conveyor-js.md
   
 - workers.js:
   
