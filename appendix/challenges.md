@@ -1,4 +1,4 @@
-# <center>Challenges and limitations of the conveyor belt simulation, including scalability and real-world complexities.</center>
+# Challenges and limitations of the conveyor belt simulation, including scalability and real-world complexities.
 
 
 The simulation faces significant challenges when scaling for longer/wider belts or integrating advanced automation like robots. **Changing belt dimensions** (e.g., more `slots`) fundamentally breaks the simulation's core logic. The fixed 10-slot array, the hardcoded worker interaction points (`for (let i = 1; i < this.slots.length; i += 2)`), and the simplistic "fall-off-the-end" waste tracking are not dynamic. A longer belt would require a complete redesign to model continuous movement and position, not discrete slots. A wider belt, implying multiple parallel lanes, is entirely outside the simulation's scope, requiring a complex multi-threaded model for competing resources and lane synchronization.
