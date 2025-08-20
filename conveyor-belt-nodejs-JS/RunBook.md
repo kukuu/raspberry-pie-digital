@@ -43,7 +43,7 @@
   
 - workers.js: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/explanations-workers.md
   
-- gpio.js
+- gpio.js: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/gpio-js.md
 
 
 
