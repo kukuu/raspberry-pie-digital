@@ -35,8 +35,9 @@
 ```
 
 
-## How The Three Core Component Files Work Together
+## How The  Core Component Files Work Together
 
+- index.js
 - conveyor.js
 - workers.js
 - gpio.js
