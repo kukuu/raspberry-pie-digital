@@ -72,8 +72,6 @@ Demonstrates API Usage: The embedded JavaScript acts as a perfect example of how
 
 Enables Basic Interaction: It allows a user to directly interact with the simulation logic running on the server through a visual medium (a web browser) instead of needing to use a command-line tool like curl.
 
-```
-Of course. Here is the expanded table that includes the new code block, explaining its role in the application.
 
 ### Expanded Code Function Analysis Table
 
@@ -90,7 +88,6 @@ Of course. Here is the expanded table that includes the new code block, explaini
 
 
 
-```
 
 ## Block C
 
@@ -106,7 +103,7 @@ Production-Grade Monitoring: The /metrics endpoint integrates the application in
 
 State Management: The reset endpoint provides a crucial administrative function, ensuring the simulation can be cleansed and returned to a known state for a new experiment or demonstration.
 
-```
+
 
 
 
@@ -122,8 +119,6 @@ State Management: The reset endpoint provides a crucial administrative function,
 | **History Management** | **Data Persistence for UI** | Creates a summary object of the simulation run (`simulationResult`) and adds it to the `simulationHistory` array. It then trims this history to only keep the last 10 runs, preventing memory from growing indefinitely. This provides the data for historical trends on the dashboard. |
 | `app.post('/api/reset', (req, res) => { ... });` | **System Reset Endpoint** | Defines the `POST /api/reset` endpoint to return the entire system to its initial state. It achieves this by calling `reset()` on the main conveyor object and every worker, clearing the `simulationHistory` array, and updating GPIO metrics to reflect the reset state. |
 
-```
-
 
 
 ## Block D 
@@ -138,7 +133,6 @@ This last code block completes the application by adding **robustness, and obser
 4.  **Operational Clarity:** The `app.listen()` callback provides immediate, clear documentation for developers by printing all active endpoints directly to the console on startup.
 5.  **System Safety:** The `SIGINT` handler guarantees that the application shuts down cleanly, which is a critical requirement when dealing with physical hardware to prevent damage or unpredictable states.
 
-```
 
 | Line of Code / Code Block | Purpose | Explanation |
 | :--- | :--- | :--- |
@@ -148,8 +142,3 @@ This last code block completes the application by adding **robustness, and obser
 | `app.use((err, req, res, next) => { ... });` | **Global Error Handler** | Express middleware that acts as a **safety net** for any unhandled errors that occur in route handlers. It logs the full error stack for debugging and returns a generic `500 Internal Server Error` response to the client, preventing sensitive information from being leaked. |
 | `app.listen(port, () => { ... });` | **Server Startup** | This command **boots the server**. It tells the Express application to start listening for incoming connections on the specified `port`. The callback function executes once the server is ready, logging a startup message and a helpful list of all available endpoints to the console. |
 | `process.on('SIGINT', () => { ... });` | **Graceful Shutdown Handler** | Listens for the `SIGINT` signal (typically from pressing `Ctrl+C` in the terminal). When received, it triggers a cleanup routine (`gpio.cleanup()`) to safely release control of the GPIO pins (critical on a real Raspberry Pi to avoid leaving them in an active state) before exiting the process. |
-
-```
-
-
-
