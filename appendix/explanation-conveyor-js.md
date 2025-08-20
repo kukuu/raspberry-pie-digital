@@ -7,7 +7,7 @@ Here is  table explaining the provided code from the `ConveyorSimulator` class.
 | Line of Code / Code Block | Purpose | Explanation |
 | :--- | :--- | :--- |
 | `const { Gpio } = require('onoff');` | **Hardware Library Import** | Imports the `onoff` library, which provides a Node.js interface to control GPIO pins on a Raspberry Pi. This is only functional on a Pi itself. |
-| `const gpio = require('./gpio');` | **Hardware Abstraction Import** | Imports the custom `gpio` module. This module likely contains the logic to abstract hardware control, allowing the same code to run on a Pi (using `onoff`) or in simulation mode (using mocks). |
+| `const gpio = require('./gpio');` | **Hardware Abstraction Import** | Imports the custom `gpio` module. This module contains the logic to abstract hardware control, allowing the same code to run on a Pi (using `onoff`) or in simulation mode (using mocks). |
 | `class ConveyorSimulator { ... }` | **Core Simulation Class** | Defines the main class that models the entire conveyor belt system, its state, and its behavior. This is the brain of the operation. |
 | `constructor() { ... }` | **Object Initialization** | Initializes a new instance of the conveyor simulator, setting all its properties to a default starting state. |
 | `this.slots = Array(10).fill(null);` | **Belt Representation** | Creates an array of 10 elements, all initially `null`. This array **models the physical conveyor belt**, where each element represents a "slot" that can hold a component (`A`, `B`), a product (`C`), or be empty (`null`). |
