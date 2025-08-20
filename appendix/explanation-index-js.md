@@ -17,7 +17,7 @@ This file is the **orchestrator and gateway** of the entire Conveyor Belt Simula
 
 It transforms a collection of individual scripts and classes into a cohesive, resilient, and controllable web application.
 
-## Bock A: Code Function 
+## Block A: Code Function 
 
 This block of code is the **bootstrapping and configuration phase** of the application. Its primary achievement is setting up a sophisticated Node.js server that:
 
