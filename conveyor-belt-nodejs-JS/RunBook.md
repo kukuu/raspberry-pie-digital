@@ -41,7 +41,7 @@
   
 - conveyor.js: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/explanation-conveyor-js.md
   
-- workers.js:
+- workers.js: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/explanations-workers.md
   
 - gpio.js
 
