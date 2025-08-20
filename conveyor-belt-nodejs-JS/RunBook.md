@@ -34,6 +34,30 @@
 
 ```
 
+
+## How The Three Core Component Files Work Together
+
+- conveyor.js
+- workers.js
+- gpio.js
+
+
+1. index.js (the main app file) requires these three modules - 
+
+2. It first calls gpio.initializeGpio() to get the hardware interface.
+
+3. It then creates a new ConveyorBelt(...) instance, passing it the GPIO configuration.
+
+It calls workers.start(conveyor, gpio), which spins up the two worker threads.
+
+The Simulation Worker ticks the simulation forward, calling conveyor.simulatePulse().
+
+The Sensor Worker monitors the GPIO (real or simulated) for changes.
+
+When the simulation triggers a sensor event (in simulatePulse) or the sensor worker detects a real change, the conveyor object emits an event.
+
+The main application in index.js listens for these events to update its status, log activity, or respond via an API.
+
 ## Running the Simulation
 
 - Install dependencies
