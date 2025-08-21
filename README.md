@@ -166,6 +166,9 @@ iii. Worker coordination handled via worker.pickOrPlace()
 
 - https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/worker-logic-explanation.md
 
+## Simulation Tests
+- https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/run-GPIO-tests.md
+
 ## Run Book
 
 - https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/RunBook.md
