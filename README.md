@@ -62,6 +62,13 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 ## Folder Structure:
 - https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/docs/folder-structure.md
 
+## Repository
+- https://github.com/kukuu/raspberry-pie-digital/tree/main/conveyor-belt-nodejs-JS
+
+## Worker Logic
+
+- https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/worker-logic-explanation.md
+
 
 ## Belt Mechanics for Conveyor.js
 
@@ -156,12 +163,6 @@ iii. Worker coordination handled via worker.pickOrPlace()
 
 - PM2 for production deployment*
 
-## Repository
-- https://github.com/kukuu/raspberry-pie-digital/tree/main/conveyor-belt-nodejs-JS
-
-## Worker Logic
-
-- https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/worker-logic-explanation.md
 
 ## Simulation Tests
 
