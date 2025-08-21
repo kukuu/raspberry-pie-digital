@@ -71,11 +71,9 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 - https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/worker-logic-explanation.md
 
 
-## Belt Mechanics for Conveyor.js
+## Belt Mechanics for Conveyor Belt
 
-### Key Features:
-
-- Belt Mechanics:
+- Key Features:
 
 1. 10-slot conveyor belt
 
@@ -161,7 +159,9 @@ Testing followed best practice verification protocols, combining unit tests for 
 - workers: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/explanations-workers.md
 - gpio: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/gpio-js.md
 
+## Simulation Belt Heartbeat
 
+- https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/conveyor-belt-heart-beat.md
 
 ## Documentation
 
