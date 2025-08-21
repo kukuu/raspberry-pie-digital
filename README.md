@@ -175,7 +175,7 @@ iii. Worker coordination handled via worker.pickOrPlace()
 
 ## Context Definitions
 
-- inndex:
+- index: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/explanation-index-js.md
 - conveyor belt
 - workers:
 - gpio:
