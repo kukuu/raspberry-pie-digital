@@ -11,7 +11,7 @@ The Conveyor Belt simulation was developed using systematic engineering principl
 
 ## Solution
 
-- This solution simulates a conveyor belt with 3 worker pairs, where components (A/B) are randomly placed (⅓ chance each). 
+- The solution simulates a conveyor belt with 3 worker pairs, where components (A/B) are randomly placed (⅓ chance each). 
 
 - Workers pick components, assemble product C (takes 4 steps), and place it back. The system includes:
 
@@ -19,11 +19,14 @@ The Conveyor Belt simulation was developed using systematic engineering principl
 
 - Unit & integration tests (Jest)
 
+- Prometheus Client  for real-time monitoring
+
+- Simulation Control Dashboard using Real-time data
+
 - SQLite persistence (stores simulation results)*
 
-- Prometheus + Grafana for real-time monitoring
+- PM2 for production deployment*
 
-- PM2 for production deployment
 
 
 ## Risk Mitigation & Optimisation Strategies:
@@ -104,7 +107,6 @@ iii. Worker coordination handled via worker.pickOrPlace()
 
 ## Conveyor Belt Simulation
 
-### Key Features:
 
 - Core Functionality:
 
@@ -143,26 +145,6 @@ iii. Worker coordination handled via worker.pickOrPlace()
 1. Initializes 3 workers by default
 
 2. Maintains individual worker states
-
-  
-## Key Components
-
-- The solution simulates a conveyor belt with 3 worker pairs, where components (A/B) are randomly placed (⅓ chance each). 
-
-- Workers pick components, assemble product C (takes 4 steps), and place it back. The system includes:
-
-- GPIO integration (LEDs indicate worker activity on Raspberry Pi)
-
-- Unit & integration tests (Jest)
-
-- Prometheus Client  for real-time monitoring
-
-- Simulation Control Dashboard using Real-time data
-
-- SQLite persistence (stores simulation results)*
-
-- PM2 for production deployment*
-
 
 ## Simulation Tests
 
