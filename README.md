@@ -186,7 +186,7 @@ Testing followed best practice verification protocols, combining unit tests for 
 
 ## Conclusion
 
-This simulation provides a foundational digital twin for industrial automation,effectively abstracting hardware complexities to provide a robust, software-defined environment for innovation. It proves that critical IIoT development - from control logic and data architecture to monitoring and safety protocols - can be rigorously tested and validated in a virtual setting, significantly reducing the time, cost, and risk associated with deploying and optimizing physical systems. 
+This simulation provides a foundational digital twin for industrial automation,effectively abstracting hardware complexities to provide a robust, software-defined environment for innovation. It proves that critical IIoT development - from control rule-based logic and data architecture to monitoring and safety protocols - can be rigorously tested and validated in a virtual setting, significantly reducing the time, cost, and risk associated with deploying and optimizing physical systems. 
 
 Yet, it faces inherent limitations like simulating an entire smart factory network in scalability and realism, such as its static architecture which cannot dynamically adapt to larger conveyor systems or integrate the complexities of advanced robotics, including latency, mechanical failures, and real - world entropy like electrical noise or environmental factors.
 
