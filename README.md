@@ -103,7 +103,7 @@ iii. Worker coordination handled via worker.pickOrPlace()
 
 2. Full reset capability with reset()
 
-## Conveyor Belt Simulation
+## Belt Simulation
 
 
 - Core Functionality:
