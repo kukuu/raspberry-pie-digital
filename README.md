@@ -103,16 +103,11 @@ iii. Worker coordination handled via worker.pickOrPlace()
 
 ## Belt Simulation
 
+- Application:
 
-- Core Functionality:
+i.  http://localhost:5000/
 
-1. POST /api/simulate - Runs simulation for specified steps
-
-2. POST /api/reset - Resets simulation state
-
-3. GET /metrics - Prometheus metrics endpoint
-
-4. GET /health - Health check endpoint
+ ii. http://localhost:5000/metrics
 
 - Monitoring:
 
