@@ -32,8 +32,6 @@ The Conveyor Belt simulation was developed using systematic engineering principl
 ## Risk Mitigation & Optimisation Strategies:
   
 Mitigation strategies include circuit breaker patterns in the API layer, exponential backoff for hardware communication, and statistical process control in the monitoring system. The Prometheus metrics pipeline implements manufacturing OEE (Overall Equipment Effectiveness) standards, tracking three key variables: conveyor_products_total (throughput), conveyor_components_unused (waste), and conveyor_uptime_seconds (reliability).
-
-- Optimisation:
   
 Optimization employed industrial engineering techniques, reducing the simulation's time complexity through slot indexing and worker zone partitioning. The solution implements five key optimizations: 
 
