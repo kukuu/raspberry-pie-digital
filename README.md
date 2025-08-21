@@ -192,8 +192,8 @@ Yet, it faces inherent limitations like simulating an entire smart factory netwo
 
 To evolve into a more robust and dynamic platform, it requires enhancements across automation - such as **configuration-as-code**, **automated scenario testing,** and **CLI integration - intelligence** through machine learning for adaptive control and predictive policies, and advanced observability with real-time alerting and feedback loops. By adopting an **event-driven architecture** and enabling faster-than-real-time simulation, this work can transition from a static model into a vital test bed for AI-driven optimization and large-scale smart factory simulations, ultimately bridging the gap between idealised digital twins and the chaotic realities of physical industrial systems.
 
-It is a perfect foundation for adding Deep Learning. We could:
+The work is a perfect foundation for adding Deep Learning. We could:
 
-i. Replace the pickOrPlace rules with a Reinforcement Learning agent that learns the optimal strategy to maximize efficiency through trial and error.
+- Replace the pickOrPlace rules with a Reinforcement Learning agent that learns the optimal strategy to maximize efficiency through trial and error.
 
-ii. Use a computer vision model to analyze a video feed of the real conveyor belt and identify components instead of using simulated sensors.
+- Use a computer vision model to analyze a video feed of the real conveyor belt and identify components instead of using simulated sensors.
