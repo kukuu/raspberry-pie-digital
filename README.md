@@ -80,11 +80,11 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 
 4. Worker Interaction:
 
-5. Workers interact with odd-numbered slots (1, 3, 5...)
+i. Workers interact with odd-numbered slots (1, 3, 5...)
 
-6. Products placed on even-numbered slots (0, 2, 4...)
+ii. Products placed on even-numbered slots (0, 2, 4...)
 
-7. Worker coordination handled via worker.pickOrPlace()
+iii. Worker coordination handled via worker.pickOrPlace()
 
 - Product Assembly:
 
