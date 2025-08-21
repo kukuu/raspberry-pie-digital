@@ -173,7 +173,7 @@ iii. Worker coordination handled via worker.pickOrPlace()
 
 - https://github.com/kukuu/raspberry-pie-digital/blob/main/conveyor-belt-nodejs-JS/RunBook.md
 
-## Context Definitions
+## Algorithm Context
 
 - index: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/explanation-index-js.md
 - conveyor belt: https://github.com/kukuu/raspberry-pie-digital/blob/main/appendix/explanation-conveyor-js.md
