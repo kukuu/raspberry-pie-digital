@@ -41,7 +41,7 @@ These improvements yielded a 40% performance gain in benchmark tests while maint
 
 - Unit & integration tests (Jest)
 
-- SQLite persistence (stores simulation results)
+- SQLite persistence (stores simulation results)*
 
 - Prometheus + Grafana for real-time monitoring
 
