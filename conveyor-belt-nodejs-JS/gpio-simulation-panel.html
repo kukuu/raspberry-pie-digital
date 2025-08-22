@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPIO Simulation Control Panel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #4ecdc4;
+            text-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #c9c9c9;
+            margin-bottom: 20px;
+        }
+        
+        .panel {
+            background: rgba(25, 35, 45, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .panel-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #ff9a76;
+            display: flex;
+            align-items: center;
+        }
+        
+        .panel-title i {
+            margin-right: 10px;
+        }
+        
+        .command-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .command {
+            background: rgba(40, 50, 60, 0.9);
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            border-left: 4px solid #4ecdc4;
+        }
+        
+        .command:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .command-text {
+            font-family: 'Courier New', monospace;
+            color: #f8f8f8;
+            font-size: 1.1rem;
+        }
+        
+        .btn-run {
+            background: linear-gradient(to right, #4ecdc4, #44a08d);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-run:hover {
+            background: linear-gradient(to right, #44a08d, #4ecdc4);
+            transform: scale(1.05);
+        }
+        
+        .btn-run:active {
+            transform: scale(0.98);
+        }
+        
+        .simulation-area {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .btn-simulate {
+            background: linear-gradient(to right, #ff9a76, #ff6f61);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 15px 0;
+        }
+        
+        .btn-simulate:hover {
+            background: linear-gradient(to right, #ff6f61, #ff9a76);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 111, 97, 0.6);
+        }
+        
+        .output {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+            font-family: 'Courier New', monospace;
+            min-height: 150px;
+            max-height: 300px;
+            overflow-y: auto;
+            text-align: left;
+            color: #00ffcc;
+            border: 1px solid rgba(0, 255, 204, 0.3);
+        }
+        
+        .success {
+            color: #00ff00;
+        }
+        
+        .error {
+            color: #ff5555;
+        }
+        
+        .info {
+            color: #5555ff;
+        }
+        
+        .status {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .status-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 120px;
+            margin: 5px;
+        }
+        
+        .status-item i {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        .led {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #555;
+            margin-right: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .led.green {
+            background: #00ff00;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        
+        .led.red {
+            background: #ff0000;
+            box-shadow: 0 0 10px #ff0000;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .command {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .btn-run {
+                align-self: flex-end;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GPIO Simulation Control Panel</h1>
+            <p class="subtitle">Interactive simulation of hardware control commands</p>
+        </header>
+        
+        <div class="panel">
+            <h2 class="panel-title">
+                <i>📟</i> Command Execution Stack
+            </h2>
+            <p>Execute individual commands or run the full simulation:</p>
+            
+            <div class="command-stack">
+                <div class="command">
+                    <div class="command-text">
+                        <span class="led"></span>
+                        node index.js
+                    </div>
+                    <button class="btn-run" onclick="runCommand('node index.js')">Run</button>
+                </div>
+                
+                <div class="command">
+                    <div class="command-text">
+                        <span class="led"></span>
+                        npm test test/unit/gpio.test.js
+                    </div>
+                    <button class="btn-run" onclick="runCommand('npm test test/unit/gpio.test.js')">Run</button>
+                </div>
+                
+                <div class="command">
+                    <div class="command-text">
+                        <span class="led"></span>
+                        npm test test/integration/hardware.test.js
+                    </div>
+                    <button class="btn-run" onclick="runCommand('npm test test/integration/hardware.test.js')">Run</button>
+                </div>
+            </div>
+            
+            <div class="simulation-area">
+                <p>> Click "Run Simulation" to start the full command sequence</p>
+                <button class="btn-simulate" onclick="runSimulation()">Run Simulation</button>
+                
+                <div class="output" id="output">
+                    <div class="info">> System ready. Waiting for commands...</div>
+                </div>
+            </div>
+            
+            <div class="status">
+                <div class="status-item">
+                    <i>📊</i>
+                    <div>System Status</div>
+                    <div id="system-status">Operational</div>
+                </div>
+                <div class="status-item">
+                    <i>⚡</i>
+                    <div>Power Level</div>
+                    <div id="power-level">98%</div>
+                </div>
+                <div class="status-item">
+                    <i>🔧</i>
+                    <div>GPIO Ports</div>
+                    <div id="gpio-ports">8/16 Active</div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>GPIO Hardware Simulation Interface | Localhost:5000</p>
+        </footer>
+    </div>
+
+    <script>
+        const outputElement = document.getElementById('output');
+        const leds = document.querySelectorAll('.led');
+        let commandQueue = [];
+        let isRunning = false;
+        
+        function addOutput(text, className = '') {
+            const line = document.createElement('div');
+            line.className = className;
+            line.textContent = '> ' + text;
+            outputElement.appendChild(line);
+            outputElement.scrollTop = outputElement.scrollHeight;
+        }
+        
+        function runCommand(command) {
+            if (isRunning) return;
+            
+            isRunning = true;
+            const index = Array.from(document.querySelectorAll('.command-text')).findIndex(
+                el => el.textContent.includes(command)
+            );
+            
+            if (index !== -1) {
+                leds[index].classList.add('green');
+            }
+            
+            addOutput(`Executing: ${command}`, 'info');
+            
+            // Simulate command execution time
+            const delay = 1500 + Math.random() * 1000;
+            
+            setTimeout(() => {
+                // Simulate success or failure (mostly success)
+                const success = Math.random() > 0.2;
+                
+                if (success) {
+                    addOutput(`Command "${command}" completed successfully`, 'success');
+                    if (index !== -1) {
+                        leds[index].classList.remove('green');
+                    }
+                } else {
+                    addOutput(`Command "${command}" failed with error code ${Math.floor(Math.random() * 1000)}`, 'error');
+                    if (index !== -1) {
+                        leds[index].classList.remove('green');
+                        leds[index].classList.add('red');
+                    }
+                }
+                
+                isRunning = false;
+                
+                // If there are commands in the queue, run the next one
+                if (commandQueue.length > 0) {
+                    const nextCommand = commandQueue.shift();
+                    runCommand(nextCommand);
+                }
+            }, delay);
+        }
+        
+        function runSimulation() {
+            if (isRunning) return;
+            
+            // Clear previous output
+            outputElement.innerHTML = '';
+            addOutput('Starting simulation...', 'info');
+            
+            // Reset all LEDs
+            leds.forEach(led => {
+                led.classList.remove('green', 'red');
+            });
+            
+            // Define the command sequence
+            const commands = [
+                'node index.js',
+                'npm test test/unit/gpio.test.js',
+                'npm test test/integration/hardware.test.js'
+            ];
+            
+            // Add some system info
+            setTimeout(() => {
+                addOutput('Initializing GPIO interfaces...', 'info');
+            }, 300);
+            
+            setTimeout(() => {
+                addOutput('System resources allocated', 'success');
+            }, 800);
+            
+            // Start the first command and queue the rest
+            commandQueue = [...commands.slice(1)];
+            runCommand(commands[0]);
+        }
+        
+        // Add some initial status messages
+        setTimeout(() => {
+            addOutput('GPIO simulation server started on port 5000', 'info');
+        }, 1000);
+        
+        setTimeout(() => {
+            addOutput('Hardware controllers initialized', 'success');
+        }, 2000);
+    </script>
+</body>
+</html>

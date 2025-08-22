@@ -1,0 +1,30 @@
+{
+    "title": "Conveyor Belt Metrics",
+    "description": "Production line monitoring dashboard",
+    "tags": ["factory", "iot"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "title": "Products per Minute",
+        "type": "graph",
+        "targets": [{
+          "expr": "rate(products_c_total[1m])",
+          "legendFormat": "Products C"
+        }],
+        "gridPos": {"x": 0, "y": 0, "w": 12, "h": 8}
+      },
+      {
+        "title": "Component Utilization",
+        "type": "stat",
+        "targets": [{
+          "expr": "(1 - (unused_a_total + unused_b_total) / (components_a_total + components_b_total)) * 100",
+          "legendFormat": "Efficiency"
+        }],
+        "gridPos": {"x": 12, "y": 0, "w": 12, "h": 8}
+      }
+    ],
+    "templating": {
+      "list": []
+    },
+    "refresh": "5s"
+  }
