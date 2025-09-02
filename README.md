@@ -5,7 +5,7 @@
 The Conveyor Belt simulation was developed using systematic engineering principles, beginning with modular decomposition of the core components. The solution architecture separates concerns between the belt mechanics (**conveyor.js**), worker coordination (**workers.js**), and hardware interface (**gpio.js**), following industrial control system design patterns. 
 
 The algorithm employs discrete time-step simulation with three key functions:**simulateStep()** handles belt movement using array rotation logic, **pickOrPlace()** implements worker decision-making with finite state machine principles, and **calculateEfficiency()** applies lean manufacturing metrics to evaluate performance. This modular approach enables parallel development and simplifies maintenance through encapsulated functionality.
-
+ 
 Leveraging a transformer-based agentic architecture, my full-stack engineering proficiency in software and mechanical engineering systems background enabled a holistic systems - thinking approach, uniquely positioning me to integrate cross - disciplinary insights and deliver an architecturally robust, industrially - grounded solution. 
 
 
